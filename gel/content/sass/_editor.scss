@@ -1,0 +1,268 @@
+.editor-content {	
+
+	h2 {
+		font-size:em(26px);
+		} 
+
+	h3 {
+		font-size:em(22px);
+		}
+		
+	h2, h3 {
+		color:#333;
+		font-family:$primary-font-bold;
+		line-height:1.3;
+		margin-bottom:lh(.25);
+		}
+		
+	h4 {
+		color:#333;
+		font-family:$primary-font-bold;
+		font-size:em(21px);
+		line-height:1.4;
+		margin-bottom:lh(.33);
+		}
+		
+	p, ul, ol {
+		color:#444;
+		font-size:1.2em;
+		font-style: normal;
+		font-weight: 400;
+		line-height:1.25;
+		margin-bottom:lh(.75);
+		}
+
+	ul ul,
+	ul ol,
+	ol ol,
+	ol ul {
+		font-size:100%;
+		margin-top:lh(.75);
+		}
+
+	small {
+		font-size:em(13px);
+		line-height:.2;
+		}
+		
+	ul ul,
+	ol ol, {
+		font-size:inherit;
+		margin-top:lh(.5);
+		}
+		
+	ul, ol {
+		margin-bottom:lh(1);
+		margin-left:lh(.75);
+		margin-right:lh(1);
+		}
+		
+	li {
+		margin-bottom:lh(.5);
+		}
+		
+	a:not(.btn) {
+		@include transitions();
+		border-bottom:1px solid $primary-color;
+		color:$primary-color;
+		orphans: 3;
+		
+		&:hover {
+			border-bottom:1px solid transparent;
+			opacity:0.8;
+			}
+
+		}
+
+	.alert a {
+		color: inherit;
+		border-color: inherit;
+		}
+
+	.run-in { 
+		font-size:em(22px);
+		line-height: 1.136;
+		
+		@include respond-min($medium) {
+			font-size:em(24px);
+			line-height:1.25;
+			}
+			
+		@include respond-min($large) {
+			font-size:em(28px);
+			line-height:1.25;
+			}
+		}
+		
+	.drop-cap {
+		display: block;
+		float: left;
+		font-size: 300%;
+		font-style: bold;
+		font-weight: 100;
+		line-height: 1;
+		margin-bottom:lh(-.25);
+		margin-right:lh(.1);
+		}
+
+	.pull-center {
+		float:none;
+		@include respond-min($medium) {
+			text-align:center;
+			}
+		}
+
+	.pull-left {
+		display:block;
+		float:left;
+		}
+
+	.pull-right {
+		display:block;
+		float:right;
+		}
+		
+	.pull-left-half {
+		float:none;
+		@include respond-min($medium) {
+			display:block;
+			float:left;
+			margin:0 1.5em 1.5em 0;
+			width:45%;
+			}
+		}
+		
+	.pull-right-half {
+		float:none;
+		@include respond-min($medium) {
+			display:block;
+			float:right;
+			margin:0 0 1.5em 1.5em;
+			width:45%;
+			img {
+				float:right;
+				}
+			}
+		}
+
+	figcaption {
+		margin:0;
+		min-height:0;
+		}
+		
+	a[href^="http"]:after,
+	a[href^="https"]:after {
+		color:$mid-grey-2;
+		content: '\e819';
+		display:inline;
+		font-family:"fontello";
+		font-size:66%;
+		margin-left:lh(.15);
+		}
+		
+	a[href^="http"].no-external:after,
+	a[href^="http://www.westsussex.gov.uk"]:after,
+	a[href^="https://www.westsussex.gov.uk"]:after,
+	a[href^="http"].btn:after {
+		content: none; 
+		margin-left:0;
+		}
+
+
+	blockquote {
+		color:$dark-grey-1;
+		display:block;
+		font-family:$secondary-font;
+		font-size:em(24px);
+		line-height:lh(.75);
+		margin:lh(1) lh(1) 0 lh(1);
+		padding:lh(.33) 0 lh(1.66) 0;
+		position:relative;
+		}
+	
+	blockquote:before {
+		display: block;
+		color:$primary-color;
+		content: "\201C";
+		font-family:georgia, serif;
+		font-size: em(60px);
+		left: 0px;
+		position: absolute;
+		top: 0px;
+		}
+
+	blockquote:after {
+		display: block;
+		color:$primary-color;
+		content: "\201D";
+		font-family:georgia, serif;
+		font-size: em(60px);
+		position: absolute;
+		left: 0px;
+		bottom: 0px;
+		}
+	
+	blockquote cite {
+		color: $mid-grey-3;
+		font-size: 14px;
+		display: block;
+		margin-top: 5px;
+		}
+ 
+	blockquote cite:before {
+		content: "\2014 \2009";
+		}
+
+	.blockquote-pull-left {
+		@include respond-min($large) {
+			float:left;
+			/*margin-left:perc(-60,700);*/
+			margin-left:0;
+			margin-right:lh(.66);
+			width:46%;
+			}
+		}
+	
+	.blockquote-pull-right {
+		@include respond-min($large) {
+			float:right;
+			/*margin-right:perc(-60,700);*/
+			margin-right:0;
+			margin-left:lh(.66);
+			width:46%;
+			}
+		}
+
+	.secondary-font	 {
+		font-family:$secondary-font;	
+		}
+
+	strong {
+		font-family:$primary-font-bold;
+		font-weight:normal;
+		}
+
+	*.row {
+		@include row;
+		}
+
+	}
+
+.editor-content--small {
+	font-size:80%;
+	}
+	
+.image {
+	margin:0 0 lh(1) 0;
+	}
+
+.image--thumb {
+	display:inline-block;
+	}
+
+.image figcaption {
+	background-color:$light-grey-1;
+	color:$dark-grey-2;
+	padding:lh(.33) lh(.66) lh(.66) lh(.66);
+	position:relative;
+	}

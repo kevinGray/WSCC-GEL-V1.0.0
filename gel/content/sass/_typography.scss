@@ -1,0 +1,347 @@
+// Typography
+//
+// <div class="row">
+//   <div class="col medium_6 primary-font"> <span class="mega dark-blue"> Myriad </span>
+//     <p class="alpha"> Myriad is our default font. </p>
+//     <p class="alpha"> To use Myriad add <code>class="primary-font"</code> or <code>class="primary-font-bold"</code> to the required tag or parent element or include <code>font-family:$primary-font</code> or <code>font-family:$primary-font-bold"</code> in the css class</p>
+//   </div>
+//   <div class="col medium_3 primary-font">
+//    <div class="peta"> Aa1 </div>
+//    <div class="alpha"> Regular </div>
+//   </div>
+//   <div class="col medium_3">
+//     <div class="peta primary-font-bold"> Aa1 </div>
+//     <div class="alpha primary-font-bold"> Bold </div>
+//   </div>
+// </div>
+//
+// Styleguide 16.0
+
+// Egyptian Slate
+//
+// <div class="row secondary-font">
+//   <div class="col medium_6"> <span class="mega dark-blue"> Egyptian Slate </span>
+//    <p class="alpha">Can be used for documents where information needs to be digested accurately and provide a more elegant alternative, such as reports, etc. Or can be used as headings with Myriad to give variety and vice versa.</p>
+//    <p class="alpha">To use Egyptian Slate add <code>class="secondary-font"</code> or <code>class="secondary-font-bold"</code> to the required tag or parent element or include <code>font-family:$secondary-font</code> or <code>font-family:$secondary-font-bold"</code> in the css class</p>
+//   </div>
+//   <div class="col medium_3 light-blue secondary-font">
+//     <div class="peta"> Aa1 </div>
+//     <div class="secondary-font"> Regular </div>
+//  </div>
+// </div>
+//
+// Styleguide 16.1
+
+
+// Sizes and recommendations
+//
+// <h3> A modular scale </h3>
+// <p> The term Modular Scale refers to a series of harmonious values. As part of the patterns library _typography.scss has a default responsive modular scale tied to the classes below. Note, this is for illutrative purposes only. Each project and a suitable modular scale should be just on an individual basis. </p>
+// <div class="dark-blue primary-font">
+//   <div class="peta push--bottom"> .Peta </div>
+//   <div class="tera push--bottom"> .Tera </div>
+//   <div class="giga push--bottom"> .Giga </div>
+//   <div class="mega push--bottom"> .Mega </div>
+//   <div class="alpha push--bottom"> .Alpha </div>
+//   <div class="beta push--bottom"> .Beta </div>
+//   <div class="gamma push--bottom"> .Gamma </div>
+//   <div class="delta  push--bottom"> .Delta </div>
+//   <div class="epsilon push--bottom"> .Epsilon </div>
+// </div>
+//
+// Styleguide 16.2
+
+
+@font-face{
+	font-family:"Egyptian Slate W01";
+	src:url("../webfonts/fonts/b4d8b5e2-192e-4ead-b7c1-a46f3ab42f46.eot?#iefix");
+	src:url("../webfonts/fonts/b4d8b5e2-192e-4ead-b7c1-a46f3ab42f46.eot?#iefix") format("eot"),
+	url("../webfonts/fonts/501175f2-0293-406e-99df-094854ab0500.woff2") format("woff2"),
+	url("../webfonts/fonts/7ea11ad8-fbf7-4d9d-8ff5-583623562ccd.woff") format("woff"),
+	url("../webfonts/fonts/bdaba18c-eb18-4539-a4d3-022d0c2bc6b0.ttf") format("truetype"),
+	url("../webfonts/fonts/2de8675b-af1b-4389-874c-5911302737ed.svg#2de8675b-af1b-4389-874c-5911302737ed") format("svg");
+	}
+
+@font-face{
+	font-family:"Myriad W01 Regular";
+	src:url("../webfonts/fonts/2bd106a4-3872-4193-8627-d7af96dd4f7e.eot?#iefix");
+	src:url("../webfonts/fonts/2bd106a4-3872-4193-8627-d7af96dd4f7e.eot?#iefix") format("eot"),
+	url("../webfonts/fonts/3b0f1c67-c2e4-4df6-976f-49d52e45aba1.woff2") format("woff2"),
+	url("../webfonts/fonts/c5b1c170-d8f7-41f9-85c2-0ab670780c6b.woff") format("woff"),
+	url("../webfonts/fonts/ba1ff8f6-0c27-4e7b-8be5-818b6c3dd801.ttf") format("truetype"),
+	url("../webfonts/fonts/a379413e-a0b8-44dc-b250-1e000e4092a4.svg#a379413e-a0b8-44dc-b250-1e000e4092a4") format("svg");
+	}
+
+@font-face{
+	font-family:"Myriad W01 Bd";
+	src:url("../webfonts/fonts/4f2af761-c017-4801-9aa5-5d30643373ce.eot?#iefix");
+	src:url("../webfonts/fonts/4f2af761-c017-4801-9aa5-5d30643373ce.eot?#iefix") format("eot"),
+	url("../webfonts/fonts/eba438b3-9ab9-48ba-b1c5-610f83b38303.woff2") format("woff2"),
+	url("../webfonts/fonts/acfb7490-30f6-4bf4-a1b8-70ff9172d209.woff") format("woff"),
+	url("../webfonts/fonts/5bf402e3-ba96-414e-bc7e-cb6689fe32c1.ttf") format("truetype"),
+	url("../webfonts/fonts/c5dceae7-427a-4765-b06b-ea2eecca3434.svg#c5dceae7-427a-4765-b06b-ea2eecca3434") format("svg");
+	}
+
+@font-face{
+	font-family:"Myriad W01 SmBd Cnd";
+	src:url("../webfonts/fonts/4653ef9b-e5ce-4c59-9ec1-0af6638fca0e.eot?#iefix");
+	src:url("../webfonts/fonts/4653ef9b-e5ce-4c59-9ec1-0af6638fca0e.eot?#iefix") format("eot"),
+	url("../webfonts/fonts/d488558f-a9ea-4e8a-b318-f7ab5cd9357a.woff2") format("woff2"),
+	url("../webfonts/fonts/a2f2aae6-fded-4f03-897a-84e978797dfd.woff") format("woff"),
+	url("../webfonts/fonts/998b20b6-d1f1-4500-8ec7-6f82276cc8ac.ttf") format("truetype"),
+	url("../webfonts/fonts/ea5e5d84-0a40-4c45-a134-5d475db7f788.svg#ea5e5d84-0a40-4c45-a134-5d475db7f788") format("svg");
+	}
+
+
+
+.primary-font {
+	font-family:$primary-font;
+	font-style:normal;
+	}
+	
+.primary-font-bold {
+	font-family:$primary-font-bold;
+	}
+
+.primary-font-condensed {
+	font-family:$primary-font-condensed;
+	}
+
+.secondary-font	 {
+	font-family:$secondary-font;	
+	}
+
+.georgia {
+	font-family:Georgia, serif;
+	}
+	
+
+/* Modular Scale */
+
+.peta {
+	font-size:em(68px);
+	line-height: 1.05;
+	
+	@include respond-min(48em) {
+		font-size:em(82px);
+		line-height:1.125;
+		}
+		
+	@include respond-min(60em) {
+		font-size: em(110px);
+		line-height:1.05
+		}
+		
+	}
+
+.tera {
+	font-size:em(28px);
+	line-height: 1;
+	
+	@include respond-min($medium) {
+		font-size:em(36px);
+		}
+		
+	@include respond-min($large) {
+		font-size:em(48px);
+		}
+		
+	}
+
+.giga { 
+	font-size:em(26px);
+	line-height:1.15;
+	
+	@include respond-min($medium) {
+		font-size:em(32px);
+		}
+		
+	@include respond-min($large) {
+		font-size:em(36px);
+		line-height:1;
+		}
+		
+	}
+
+.mega { 
+	font-size:em(22px);
+	line-height: 1.136;
+	
+	@include respond-min($medium) {
+		font-size:em(24px);
+		line-height:1.25;
+		}
+		
+	@include respond-min($large) {
+		font-size:em(28px);
+		line-height:1.1;
+		}
+		
+	}
+
+.alpha { 
+	font-size:em(18px);
+	line-height: 1;
+	
+	@include respond-min($medium) {
+		font-size:em(21px);
+		}
+
+	@include respond-min($xlarge) {
+		font-size:em(23px);
+		}
+
+	}
+
+.beta {  
+	font-size:em(16px);
+	line-height: 1.3;
+	}
+
+
+.gamma {  
+	font-size:em(14px);
+	line-height:1.3;
+	}	
+
+
+.delta {  
+	font-size:em(12.4px);
+	line-height:1.4;
+	}
+
+
+.epsilon {  
+	font-size:em(9.88px);
+	line-height:1.4;
+	}
+
+
+body {
+	font-family:$font-family;
+	font-weight:normal;
+	}
+
+
+h1 {
+	color:$dark-grey-3;
+	font-family:$primary-font;
+	}
+
+
+h1,
+h2,
+h3,	
+h4,
+h5,
+h6 {	
+	font-weight:normal;
+	}
+	
+p  {
+	margin-bottom:lh(.75);
+	}
+
+a {	
+	@include transitions();
+	color:$primary-color;
+	text-decoration:none;
+
+	&:hover {
+		text-decoration:none;
+		opacity: 0.8;
+		}
+
+	}
+		
+.run-in {
+	font-size:em(18.7px);
+	line-height:lh(.88);
+	margin--bottom:lh(.66);
+	}
+
+ul, ol {
+	margin:0;
+	}
+	
+ul {
+	list-style-type:disc;
+	}
+	
+ol{
+	list-style-type:decimal;
+	}
+
+figure.quote blockquote {
+	color:$dark-grey-1;
+	display:block;
+	font-family:$secondary-font;
+	font-size:em(24px);
+	line-height:lh(.75);
+	margin:lh(1) lh(1) 0 lh(1);
+	padding:lh(.33) 0 lh(1.66) 0;
+	position:relative;
+	}
+	
+figure.quote blockquote:before {
+	display: block;
+	color:$primary-color;
+	content: "\201C";
+	font-family:georgia, serif;
+	font-size: em(60px);
+	left: 0px;
+	position: absolute;
+	top: 0px;
+	}
+
+figure.quote blockquote:after {
+	display: block;
+	color:$primary-color;
+	content: "\201D";
+	font-family:georgia, serif;
+	font-size: em(60px);
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	}
+	
+figure.quote cite {
+	color: $dark-grey-3;
+	font-size: 14px;
+	font-style:normal;
+	display: block;
+	margin:0 0 lh(1) lh(1);
+	}
+ 
+figure.quote cite:before {
+	content: "\2014 \2009";
+	}
+	
+.bold {
+	font-weight:700;
+	}
+	
+.italic {
+	font-style:italic;
+	}	
+	
+.uppercase {
+	text-transform: uppercase;
+	}
+	
+.letterspace {
+	letter-spacing:em(5px);
+	}
+	
+address {
+	font-style:normal;
+	text-transform:none;
+	}
+
+.center{
+	text-align: center;
+	}
+
+.break-word {
+	word-wrap: break-word
+	}

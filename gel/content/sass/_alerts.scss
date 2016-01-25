@@ -1,0 +1,93 @@
+// Alerts
+//
+// Alerts are handy elements you can drop into a form or inline on a page to communicate success, warnings, failure or just information. They'll conform to 100% of the container width you put them in.
+//
+// Styleguide 2.0
+
+
+// Options
+//
+// You can add more classes to your alert box to change its appearance - `.alert--info`, `.alert--success`, `.alert--warning `, or `.alert--danger`
+//
+// .alert--info      - Used as an alternative to the default styles.
+// .alert--success   - Indicates a successful or positive action.
+// .alert--warning   - Indicates caution should be taken with this action.
+// .alert--danger    - Indicates a dangerous or potentially negative action.
+//
+// Markup:
+// <div class="alert {$modifiers}">This is an message with a <a href="#">link</a></div>
+// <div class="alert alert--small {$modifiers}">This is a smaller message with a <a href="#">link</a></div>
+//
+// Styleguide 2.1
+
+// Core
+
+
+
+.alert {
+	@include clearfix();
+	background-color:$light-grey-2;
+	color:$dark-grey-1;
+	display:block;
+	font-family:$primary-font;
+	font-size:em(18px); 
+	margin-bottom:lh(1);
+	padding:lh(.66) lh(1);
+
+	@include respond-min(48em) {
+		padding:lh(1) lh(1.66);
+		}	
+
+	p {
+		color:inherit !important;
+		}
+
+	a {
+		border-bottom:1px solid $dark-grey-1;
+		border-color:inherit;
+		color:inherit;
+
+		&:hover {
+			border-bottom:1px solid transparent;
+			text-decoration:none;
+			}
+
+		}
+
+	}
+
+	
+.alert--info {
+    background-color:rgba($info-color, .15);
+	color:shade($info-color,50%);
+	}
+	
+
+.alert--success {
+    background-color:rgba($green, .3);
+	color:shade($dark-green,50%);
+	}
+	
+
+.alert--warning {
+    background-color:#FAE6CB;
+	color:shade($warning-color,35%);
+	}
+	
+
+.alert--danger {
+    background-color:#F2DEDE;
+	color:shade($danger-color,25%);
+	}
+	
+
+.alert--small {
+	font-size:em(14px);
+	line-height:1.1;
+	padding:lh(.33) lh(.66);
+	
+	@include respond-min(48em) {
+		padding:lh(.33) lh(.66);
+		}
+
+	}

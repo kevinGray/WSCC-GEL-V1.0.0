@@ -1,0 +1,46 @@
+.gallery {
+	padding:lh(1) lh(2);
+	position:relative;
+	}
+	
+.gallery__nav--exit {
+	position:absolute;
+	right:lh(.66);
+	top:lh(.66);
+	}
+	
+	
+.gallery__nav {
+	bottom:0;
+	display:block;
+	font-size:em(62px);
+	height:100%;
+	left:0;
+	line-height:100%;
+	position:absolute;
+	text-align:center;
+	top:0;
+	width:80px;
+	z-index:5;
+	&:hover {
+		color:$primary-color;
+		}
+	}
+
+.gallery__nav--next {
+	left:auto;
+	right:80px;
+	}
+	
+.gallery__nav--icon {
+	position:absolute;
+	top:45%;
+	}
+	
+.gallery__caption {
+	background-color:rgba(0, 0, 0, 0.5);
+	bottom:0;
+	padding:lh(.66);
+	position:absolute;
+	width:100%;
+	}

@@ -1,0 +1,162 @@
+// Accordion
+//
+// Accordions are elements used to expand and collapse content that is broken into logical sections, much like tabs. A lightweight (~1kb) jQuery plugin that enables expanding and collapsing content. 
+//
+// Styleguide 1.0
+
+// Default Example
+//
+// Markup:
+//<div data-collapse="">
+//  <h3 class="js-collapse soft-half bg-light-grey-1"><span class="icon icon-minus"></span><span class="icon icon-plus"></span> Click me to show or hide the content </h3>
+//  <div class="soft">
+//    Accordion content lorem ipsum dolor
+//  </div>
+//  <h3 class="js-collapse soft-half bg-light-grey-1"><span class="icon icon-minus"></span><span class="icon icon-plus"></span> Click me to show or hide the content </h3>
+//  <div class="soft">
+//    Accordion content lorem ipsum dolor
+//  </div>
+//  <h3 class="js-collapse soft-half bg-light-grey-1"><span class="icon icon-minus"></span><span class="icon icon-plus"></span> Click me to show or hide the content </h3>
+//  <div class="soft">
+//    Accordion content lorem ipsum dolor
+//  </div>
+//  <h3 class="js-collapse soft-half bg-light-grey-1"><span class="icon icon-minus"></span><span class="icon icon-plus"></span> Click me to show or hide the content </h3>
+//  <div class="soft">
+//    Accordion content lorem ipsum dolor
+//  </div>
+//  <h3 class="js-collapse soft-half bg-light-grey-1"><span class="icon icon-minus"></span><span class="icon icon-plus"></span> Click me to show or hide the content</h3>
+//  <div class="soft">
+//    Accordion content lorem ipsum dolor
+//  </div>
+//</div>
+//
+//
+//
+// Styleguide 1.1
+
+
+// Accordion Example
+//
+// Markup:
+//<div data-collapse="accordion">
+//  <h3 class="js-collapse soft-half bg-light-grey-1"><span class="icon icon-minus"></span><span class="icon icon-plus"></span> Click me to show or hide the content</h3>
+//  <div class="soft">
+//    Accordion content lorem ipsum dolor
+//  </div>
+//  <h3 class="js-collapse soft-half bg-light-grey-1"><span class="icon icon-minus"></span><span class="icon icon-plus"></span> Click me to show or hide the content</h3>
+//  <div class="soft">
+//    Accordion content lorem ipsum dolor
+//  </div>
+//  <h3 class="js-collapse soft-half bg-light-grey-1"><span class="icon icon-minus"></span><span class="icon icon-plus"></span> Click me to show or hide the content</h3>
+//  <div class="soft">
+//    Accordion content lorem ipsum dolor
+//  </div>
+//  <h3 class="js-collapse soft-half bg-light-grey-1"><span class="icon icon-minus"></span><span class="icon icon-plus"></span> Click me to show or hide the content</h3>
+//  <div class="soft">
+//    Accordion content lorem ipsum dolor
+//  </div>
+//  <h3 class="js-collapse soft-half bg-light-grey-1"><span class="icon icon-minus"></span><span class="icon icon-plus"></span> Click me to show or hide the content</h3>
+//  <div class="soft">
+//    Accordion content lorem ipsum dolor
+//  </div>
+//</div>
+//
+//
+//
+// Styleguide 1.2
+
+
+// Persistence Example
+//
+// Markup:
+//<div data-collapse="persist">
+//  <h3 class="js-collapse soft-half bg-light-grey-1"><span class="icon icon-minus"></span><span class="icon icon-plus"></span> Click me to show or hide the content</h3>
+//  <div class="soft">
+//    Accordion content lorem ipsum dolor
+//  </div>
+//  <h3 class="js-collapse soft-half bg-light-grey-1"><span class="icon icon-minus"></span><span class="icon icon-plus"></span> Click me to show or hide the content</h3>
+//  <div class="soft">
+//    Accordion content lorem ipsum dolor
+//  </div>
+//  <h3 class="js-collapse soft-half bg-light-grey-1"><span class="icon icon-minus"></span><span class="icon icon-plus"></span> Click me to show or hide the content</h3>
+//  <div class="soft">
+//    Accordion content lorem ipsum dolor
+//  </div>
+//  <h3 class="js-collapse soft-half bg-light-grey-1"><span class="icon icon-minus"></span><span class="icon icon-plus"></span> Click me to show or hide the content</h3>
+//  <div class="soft">
+//    Accordion content lorem ipsum dolor
+//  </div>
+//  <h3 class="js-collapse soft-half bg-light-grey-1"><span class="icon icon-minus"></span><span class="icon icon-plus"></span> Click me to show or hide the content</h3>
+//  <div class="soft">
+//    Accordion content lorem ipsum dolor
+//  </div>
+//</div>
+//
+//
+//
+// Styleguide 1.3
+
+
+
+
+/* JS Collapse ---------------------- */
+/* http://webcloud.se/jQuery-Collapse */
+
+.js-collapse {
+
+	
+	&:hover a {
+		color:$primary-color;
+		cursor:pointer;
+		text-decoration:none;
+		&:visited {
+			color:$primary-color;
+			}
+		}
+		
+	a {
+		color:$dark-grey-3;
+		display:block;
+		position:relative;
+		&:visited {
+			color:$dark-grey-3;
+			}
+		}
+	
+	.icon-minus,
+	.icon-plus {
+		color:$primary-color;
+		}
+		
+	.icon-minus {
+		display:none;
+		}
+		
+	&.open {
+
+		.icon-minus {
+			display:inline-block;
+			}
+
+		.icon-plus {
+			display:none;
+			}
+
+		}
+		
+	}
+	
+	
+
+.collapse__content {	
+	@include respond-min(48em) {
+		padding-left:lh(1.33);
+		}
+
+	}
+
+
+
+
+
+

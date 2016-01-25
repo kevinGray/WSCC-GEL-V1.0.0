@@ -1,0 +1,342 @@
+/**
+ *
+ * Used to generate responsive styles according to the breakpoint we set into the variables file
+ *
+ */
+/**
+ *
+ * Simpler shortcut to create easily break points
+ *
+ */
+/**
+ * Easy functions to create easily pure css arrows anywhere
+ */
+/**
+ *
+ * The wall could be used to show an image gallery or any other content in a "google images" user interaction way
+ * Here there is all the html needed
+ *
+ *
+ *  <div class="GITheWall">
+ *    <ul>
+ *      <li data-contenttype="image" data-href="path/to/the/image">
+ *        <img src="small/thumb" />
+ *      <li>
+ *      <li data-contenttype="ajax" data-href="path/to/the/html/to/load">
+ *        <img src="small/thumb" />
+ *      <li>
+ *    </ul>
+ *  </div>
+ *
+ */
+
+.GITheWall ul {
+	list-style: none;
+	margin: 0 auto;
+	text-align: left;
+	width: 100%;
+	}
+
+.GITheWall ul li.GI_TW_Selected_Row {
+	-webkit-transition: margin-bottom 0.4s ease-in;
+	-moz-transition: margin-bottom 0.4s ease-in;
+	-o-transition: margin-bottom 0.4s ease-in;
+	transition: margin-bottom 0.4s ease-in;
+	}
+
+.GI_TW_expander {
+	background: $blue;
+	height: 0;
+	left: 0;
+	margin-top: 10px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+
+	-webkit-transition: height .4s ease-in;
+	-moz-transition: height .4s ease-in;
+	-o-transition: height .4s ease-in;
+	transition: height .4s ease-in;
+
+	}
+
+.GI_TW_expander.animating {
+	overflow: hidden !important;
+	}
+
+.GI_TW_expander.opened {
+	overflow: visible;
+	}
+
+.GI_TW_expander .GI_TW_pointer {
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 20px solid $blue;
+	height: 0;
+	margin-left:10px;
+	margin-top: -20px;
+	position: absolute;
+	width: 0;
+
+
+	-webkit-transition: left 0.3s ease-in;
+	-moz-transition: left 0.3s ease-in;
+	-o-transition: left 0.3s ease-in;
+	transition: left 0.3s ease-in;
+	}
+
+.GI_TW_expander .GI_TW_expander-inner {
+	height: 800px;
+	overflow: hidden;
+	padding-bottom:lh(3);
+	padding-top:lh(1.66);
+
+
+	@include respond-min($medium) {
+		padding-bottom:lh(6);
+		}
+
+	@include respond-min($large) {
+		padding-top:0;
+		}
+
+	}
+
+
+.GI_TW_expander .GI_TW_Controls {
+	z-index: 200;
+	}
+
+ .GI_TW_expander .GI_TW_close {
+	cursor: pointer;
+	height: 40px;
+	position: absolute;
+	right: 3%;
+	top: 12px;
+	width: 40px;
+
+	@include respond-min($medium) {
+		margin-right:-20px;
+		right: 6%;
+		}
+
+	@include respond-min($large) {
+		top: 20px;
+		}
+
+	@include respond-min($xlarge) {
+		right: 12%;
+		}
+
+	} 
+
+.GI_TW_expander .GI_TW_close:before {	
+	color:#fff;
+	content: '\E806';
+	display: block;
+	font-family: "fontello";
+	font-size: 2em;
+	text-align: center;
+	}
+		
+
+.GI_TW_expander .GI_TW_arrow {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	}
+
+.GI_TW_expander .GI_TW_arrow.GI_TW_hidden {
+	display: none;
+	}
+
+.GI_TW_expander .GI_TW_arrow.GI_TW_next {
+	right: 30px;
+	}
+
+.GI_TW_expander .GI_TW_arrow.GI_TW_prev {
+	left: 30px;
+	}
+
+.GI_TW_expander .GI_TW_loading {
+	border-radius: 50%;
+	background: #ddd;
+	box-shadow: 0 0 1px #cccccc, 15px 30px 1px #cccccc, -15px 30px 1px #cccccc;
+	height: 20px;
+	left: 50%;
+	margin: -25px 0 0;
+	position: absolute;
+	top: 50%;
+	width: 20px;
+
+	-webkit-animation: loader 0.5s infinite ease-in-out both;
+	-moz-animation: loader 0.5s infinite ease-in-out both;
+	-ms-animation: loader 0.5s infinite ease-in-out both;
+	-o-animation: loader 0.5s infinite ease-in-out both;
+	animation: loader 0.5s infinite ease-in-out both;
+
+	}
+
+@-moz-keyframes loader {
+  0% {
+    background: #ddd;
+	}
+
+  33% {
+    background: #ccc;
+    box-shadow: 0 0 1px #cccccc, 15px 30px 1px #cccccc, -15px 30px 1px #dddddd;
+	 }
+
+  66% {
+    background: #ccc;
+    box-shadow: 0 0 1px #cccccc, 15px 30px 1px #dddddd, -15px 30px 1px #cccccc;
+	}
+}
+
+@-webkit-keyframes loader {
+  0% {
+    background: #ddd;
+  }
+
+  33% {
+    background: #ccc;
+    box-shadow: 0 0 1px #cccccc, 15px 30px 1px #cccccc, -15px 30px 1px #dddddd;
+  }
+
+  66% {
+    background: #ccc;
+    box-shadow: 0 0 1px #cccccc, 15px 30px 1px #dddddd, -15px 30px 1px #cccccc;
+  }
+}
+
+@-o-keyframes loader {
+  0% {
+    background: #ddd;
+  }
+
+  33% {
+    background: #ccc;
+    box-shadow: 0 0 1px #cccccc, 15px 30px 1px #cccccc, -15px 30px 1px #dddddd;
+  }
+
+  66% {
+    background: #ccc;
+    box-shadow: 0 0 1px #cccccc, 15px 30px 1px #dddddd, -15px 30px 1px #cccccc;
+  }
+}
+
+@-ms-keyframes loader {
+  0% {
+    background: #ddd;
+  }
+
+  33% {
+    background: #ccc;
+    box-shadow: 0 0 1px #cccccc, 15px 30px 1px #cccccc, -15px 30px 1px #dddddd;
+  }
+
+  66% {
+    background: #ccc;
+    box-shadow: 0 0 1px #cccccc, 15px 30px 1px #dddddd, -15px 30px 1px #cccccc;
+  }
+}
+
+@keyframes loader {
+  0% {
+    background: #ddd;
+  }
+
+  33% {
+    background: #ccc;
+    box-shadow: 0 0 1px #cccccc, 15px 30px 1px #cccccc, -15px 30px 1px #dddddd;
+  }
+
+  66% {
+    background: #ccc;
+    box-shadow: 0 0 1px #cccccc, 15px 30px 1px #dddddd, -15px 30px 1px #cccccc;
+  }
+}
+
+
+.GI_TW_Current .list--blockgrid__link {
+	
+	}
+
+.GI_TW_expander-inner {
+
+	.list--blockgrid__section-title {
+		color:#fff;
+		display:block;
+		font-size:em(20px);
+		line-height:1.2;
+		padding:lh(.25) 0 lh(.5) 0;
+
+		@include respond-min($medium) {
+			font-size:em(24px);
+			padding:lh(.75) lh(.33);
+			width:85%;
+			}
+
+		@include respond-min($large) {
+			padding:lh(1) lh(.33);
+			}
+
+		}
+
+	.list--blockgrid__item {
+		border-right: none;
+		height:auto;
+		margin:0;
+		min-height:0;
+		padding:em(10px) 0;
+		width:100%;
+
+		@include respond-min($medium) {
+			padding:em(10px) em(20px);
+			width:33.333%;
+			}
+
+		@include respond-min($large) {
+			width:25%;
+			}
+
+		}
+
+	.list--blockgrid__link {
+		background-color:shade($blue, 15%);
+		border-top:none;
+		color:#fff;
+		font-size:em(18px);
+		line-height:1.2;
+		margin:0;
+		padding:lh(.5) lh(.33);
+		text-align:center;
+
+		@include respond-min($medium) {
+			height: lh(4);
+			}
+
+		@include respond-min($large) {
+			height: lh(3.33);
+			}
+
+		@include respond-min($xlarge) {
+			height: lh(2.66);
+			}
+
+		&:hover {
+			background-color:#fff;
+			color:shade($blue, 15%);
+			}
+
+
+		}
+
+	.list--blockgrid__title {
+		font-size:em(18px);
+		font-weight:normal;
+		}
+
+	}

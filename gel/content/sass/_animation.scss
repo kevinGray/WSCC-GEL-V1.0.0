@@ -1,0 +1,87 @@
+.no-touch .scale--hover {	
+	&:hover {
+		transition: all ease 0.33s;
+		-webkit-transition: all ease 0.33s;
+		-moz-transition: all ease 0.33s;
+		-o-transition: all ease 0.33s;
+		-ms-transition: all ease 0.33s;
+		
+		transform: scale(1.33);
+		-webkit-transform: scale(1.33);
+		-moz-transform: scale(1.33);
+		-o-transform: scale(1.33);
+		-ms-transform: scale(1.33);
+		margin:-1.33;
+		z-index:999;
+		}
+	
+	}
+	
+
+
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-o-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade--in {
+	opacity:0;
+	
+	-webkit-animation:fadeIn ease-in 1;
+	-moz-animation:fadeIn ease-in 1;
+	-o-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+	
+	-webkit-animation-fill-mode:forwards;
+	-moz-animation-fill-mode:forwards;
+	-o-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+	
+	-webkit-animation-duration:.33s;
+	-moz-animation-duration:.33s;
+	-o-animation-duration:.33s;
+	animation-duration:.33s;
+	
+	}
+
+
+.no-csstransforms .fade--in, 
+.no-csstransforms3d .fade--in,  
+.no-csstransitions .fade--in  {
+	opacity:1;
+	}
+	
+	
+.fly--up {
+	animation: form-fly-up 1s ease;
+	}
+
+
+@keyframes form-fly-up {
+   0% { transform: translateY(500px); }
+   66% { transform: translateY(-50px); }
+   100% { transform: translateY(0); }
+	}
+
+
+.no-touch .fade--hover  {
+
+	img {
+		border-bottom:4px solid transparent;
+		opacity:1;
+		}
+	
+	&:hover {
+		img {
+			background-color: $primary-color;
+			border-bottom:4px solid $primary-color;
+			opacity:0.85;
+			}
+
+		}
+
+	}
+	
+	
+		

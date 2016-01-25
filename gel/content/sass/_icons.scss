@@ -1,0 +1,200 @@
+// Iconography
+//
+//There are the icons included by default for use in the user interface. You can easily add any of the below icons with just the class name. The icons are vector based, so there is no pixelation or blurring on high-resolution screens as there would be if the graphic was raster and needed to scale up. They can be controlled with CSS, like the size, color, shadow, etc.
+//
+// Styleguide 8.0
+
+// Information and Services icons
+//
+//  <ul class="row text--center hard list items-container">
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-family tera block">&nbsp;</span> .icon-family </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-book tera block"></span> .icon-book </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-road tera block"></span> .icon-road </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-briefcase tera block"></span> .icon-briefcase </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-heart tera block"></span> .icon-heart </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-certificate tera block"></span> .icon-certificate </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-housing tera block"></span> .icon-housing </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-leisure tera block"></span> .icon-leisure </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-recycle tera block"></span> .icon-recycle </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-medkit tera block"></span> .icon-medkit  </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-chart-bar tera block"></span> .icon-chart-bar  </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-info tera block"></span> .icon-info  </li>
+// </ul>
+//
+// Styleguide 8.1
+
+
+// User interface icons
+//
+//  <ul class="row text--center hard list items-container">
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-mail-alt tera block"></span> .icon-mail-alt </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-user tera block"></span> .icon-user </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-users tera block"></span> .icon-users </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-videocam tera block"></span> .icon-videocam </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-picture tera block"></span> .icon-picture </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-camera tera block"></span> .icon-camera </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-th tera block"></span> .icon-th </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-ok tera block"></span> .icon-ok </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-cancel tera block"></span> .icon-cancel </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-link-ext tera block"></span> .icon-link-ext  </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-print tera block"></span> .icon-print  </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-location tera block"></span> .icon-location  </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-phone tera block"></span> .icon-phone </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-fax tera block"></span> .icon-fax </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-cog tera block"></span> .icon-cog </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-cog-alt tera block"></span> .icon-cog-alt </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-calendar tera block"></span> .icon-calendar </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-resize-full tera block"></span> .icon-resize-full </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-angle-left tera block"></span> .angle-left </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-angle-right tera block"></span> .icon-angle-right </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-angle-up tera block"></span> .icon-angle-up </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-angle-down tera block"></span> .icon-angle-down </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-globe tera block"></span> .icon-globe </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-check tera block"></span> .icon-check  </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-check-empty tera block"></span> .icon-check-empty  </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-search tera block"></span> .icon-plus  </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-minus tera block"></span> .icon-minus  </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-pinterest-circled tera block"></span> .icon-pinterest-circled  </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-twitter-circled tera block"></span> .icon-twitter-circled </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-facebook-circled tera block"></span> .icon-facebook-circled  </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-gplus-circled tera block"></span> .icon-gplus-circled  </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-download-alt tera block"></span> .icon-download-alt  </li>
+//    <li class="col small_4 medium_2 push--bottom soft-half item"> <span class="icon-accessibility tera block"></span> .icon-accessibility  </li>
+// </ul>
+//
+// Styleguide 8.2
+
+// Icon sizing
+//
+// .tera - Tera
+// .giga - Giga
+// .mega - Mega
+// .alpha - Alpha
+// .beta - Beta
+// .gamma - Gamma
+//
+// Markup:
+// <div class="inline-block soft">
+//   <span class="icon-family {$modifiers}"></span>
+// </div>
+// <div class="inline-block soft">
+//   <span class="icon-alert {$modifiers}"></span>
+// </div>
+//
+// Styleguide 8.3
+
+// Icon colours
+//
+// .primary-color - Primary colour
+// .secondary-color - Secondary colour
+// .grey - Grey
+//
+// Markup:
+// <div class="inline-block soft">
+//   <span class="icon-family tera {$modifiers}"></span>
+// </div>
+//
+// Styleguide 8.4
+
+[class^="icon-"]:before, 
+[class*=" icon-"]:before {
+	margin-left:0 !important;
+	margin-right:0 !important;
+	}
+
+.topic__icon  {
+	background-color:$dark-grey-3;
+	background-color:#fff;
+	color:darken($primary-color, 20%);
+	font-size:em(24px);
+	height:em(30px);
+	line-height:em(30px);
+	text-align:center;
+	width:em(30px);
+	
+	@include respond-min(48em) {
+		font-size:em(32px);
+		height:em(48px);
+		line-height:em(48px);
+		width:em(48px);
+		}
+		
+	@include respond-min(60em) {
+		font-size:em(48px);
+		height:em(32px);
+		line-height:em(32px);
+		width:em(32px);
+		}
+
+	@include old-ie {
+		background-color:transparent;
+		background-image:url(../images/common/ie-circle-dark-grey-3-96x96.png);
+		background-repeat:no-repeat;
+		}
+		
+		
+	}
+	
+.topic__icon--small  {
+	background-color:$dark-grey-3;
+	background-color:darken($primary-color, 20%);
+	color:$light-grey-1;
+	font-size:em(24px);
+	height:em(32px);
+	line-height:em(32px);
+	text-align:center;
+	width:em(32px);
+	
+	@include old-ie {
+		background-color:transparent;
+		background-image:url(../images/common/ie-circle-primary-48x48.png);
+		background-repeat:no-repeat;
+		}
+		
+		
+	}
+
+.icon--header-background {
+	color: #000; 
+	font-size: 2500%; 
+	opacity: .1; 
+	position: absolute; 
+	top: -150px; 
+	right: -250px; 
+	z-index:0;
+	
+	@include respond-min(48em) {
+		font-size: 3200%; 
+		top: -175px; 
+		right: -300px; 
+		}
+	
+	@include respond-min(60em) {
+		font-size: 4200%; 
+		right: -200px; 
+		top: -350px; 
+		}
+
+	@include old-ie {
+		color:#398AAF
+		}
+
+	}
+
+
+.icon--primary-color {
+	
+	&:before {
+		color:$primary-color;
+		}
+		
+	}
+
+
+.icon--secondary-color {
+	
+	&:before {
+		color:$secondary-color;
+		}
+		
+	}

@@ -1,0 +1,361 @@
+.masthead {
+	background-color:#000;
+	min-height:lh(3);
+	position:relative;
+
+	@include respond-min($medium) {
+		margin:0 auto;
+		min-height:0;
+		padding-bottom:lh(.33);
+		padding-top:lh(.33);
+		width:100%;
+		}	
+	}
+		
+		
+.icon--header {
+	color:#fff;
+	font-size:em(24px);
+	margin-left:.2em;
+	margin-right:.2em;
+	}
+	
+	
+.panel-trigger {
+	-webkit-transition: background-color 0.2s ease-in-out;
+	-moz-transition: background-color 0.2s ease-in-out;
+	-o-transition: background-color 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out; 
+	
+	background-color:$primary-color;
+	border:none;
+	color:#fff;
+	display:block;
+	height:em(42px);
+	line-height:em(42px);
+	padding:0;
+	position:absolute;
+	text-align:center;
+	top:16px;
+	width:em(42px);
+	z-index:999;
+
+	&:hover,
+	&:active {
+		background-color:darken($primary-color,10%);
+		}
+			
+	}
+			
+			
+.panel-trigger__nav-primary {
+	line-height:auto;
+	right:em(-18px);
+	width:auto;
+		
+	@include respond-min($large) {
+		&:hover {
+			cursor:pointer;
+			}
+			
+		}
+
+	}
+
+.panel-trigger__search {
+	right:em(54px);	
+
+	@include respond-min($medium) {
+		display:none;
+		}
+
+	}	
+
+
+
+// =========== General button styles & variables =======================================//
+.lines-button {
+	border:none;
+	background:none;
+	display:inline-block;
+	margin: 0 1em;
+
+	span {
+		display:block;
+		float:left;
+		}
+	}
+
+$color : #ecf0f1;
+$transition: .3s;// increase this to see the transformations happen in slow motion
+
+
+
+/* ====================== lines button ==================================================*/
+
+$button-size: em(24px); 
+
+//common to all three-liners
+
+.lines-button {
+	background-color:$primary-color;
+	color:#fff;
+	cursor: pointer;
+	height:42px;
+	line-height:42px;
+	user-select: none;
+	padding: 0 $button-size/2;
+	transition: $transition;
+
+	@include respond-min($medium) {
+		width:em(100px);
+		}
+
+	&:hover {
+		opacity: 1;
+		}
+
+	&:active {
+		transition: 0;
+		}
+
+	}
+
+.lines-button__text {
+	font-family:$primary-font;
+	font-size:em(16px);
+	float:right;
+	margin-left:lh(.33);
+	}
+
+
+//common to all three-liners
+
+@mixin line {
+	background: $color;
+	border-radius: $button-size/14; 
+	display: inline-block;	
+	height: $button-size/7;
+	transition: $transition;
+	width: $button-size;
+	}
+
+//common to all three-liners
+
+.lines {
+  @include line;
+  position: relative; 
+
+@include respond-min($medium) {
+	margin-top:20px;
+	}	
+
+  &:before, 
+  &:after {
+   @include line;
+    position: absolute;
+    left:0;
+    content: '';
+    -webkit-transform-origin: $button-size/14 center;
+            transform-origin: $button-size/14 center;
+	}
+
+  &:before { 
+    top: $button-size/4; 
+	}
+
+  &:after { 
+    top: -$button-size/4; 
+	}
+
+}
+
+
+.lines-button.close {
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+	}
+
+// for both the arrow up and left icons
+.lines-button.arrow.close {
+    .lines {
+      &:before,
+      &:after {
+        top: 0;
+        width: $button-size/1.8;
+		}
+
+      &:before { 
+        -webkit-transform: rotate3d(0,0,1,40deg); 
+                transform: rotate3d(0,0,1,40deg); 
+		}
+
+      &:after { 
+        -webkit-transform: rotate3d(0,0,1,-40deg); 
+                transform: rotate3d(0,0,1,-40deg); 
+		}
+    }
+}
+
+//arrow up only: just rotate by 90degrees
+.lines-button.arrow-up.close {
+  -webkit-transform: scale3d(.8,.8,.8) rotate3d(0,0,1,90deg);
+          transform: scale3d(.8,.8,.8) rotate3d(0, 0, 1,90deg);
+}
+//three-lines to minus only
+.lines-button.minus.close{
+  .lines {
+    &:before, &:after{
+      -webkit-transform: none;
+              transform: none;
+      top:0;
+      width: $button-size;
+    }
+  }
+}
+
+//three-lines to x
+.lines-button.x.close{
+  .lines {
+    background: transparent;
+    &:before, &:after{
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      top:0;
+      width: $button-size;
+    }
+    &:before{
+      -webkit-transform: rotate3d(0,0,1,45deg); 
+              transform: rotate3d(0,0,1,45deg); 
+    }
+    &:after{
+      -webkit-transform: rotate3d(0,0,1,-45deg); 
+              transform: rotate3d(0,0,1,-45deg); 
+    }
+  }
+}
+
+
+
+
+			
+.site-logo {
+	color:#fff;
+	display:inline-block;
+	margin-top:12px;
+	min-height:em(72px);
+	width:80px;
+
+	@include respond-min($medium) {
+		margin:0;
+		width:100px;
+		}
+
+	}
+
+.panel-alpha {
+	border-left:1px dotted #fff;
+	color:#fff;
+	display:inline-block;
+	margin-left:lh(.66);
+	padding:lh(.25) 0 lh(.25) lh(.66);
+	}
+	
+
+.js .js-panel__search {
+	display:none;
+	}
+	
+.panel-search {
+	padding:lh(.33) 0;
+
+	@include respond-min($medium) {
+		display:block !important;
+		margin:0;
+		position:relative;
+		z-index:2;
+		}
+
+	}
+
+	
+.search {
+	position:relative;
+	
+	label {
+		@include visuallyhidden;
+		}
+		
+	input[type="text"] {
+		@include border-radius(3px);
+		border:none;
+		box-sizing: border-box; 
+		display:block;
+		font-size:em(16px);
+		height:em(42px);
+		padding: 0 lh(5) 0 lh(.66);
+		position: relative;
+		width:100%;
+		z-index:1;
+
+		@include old-ie {
+			line-height:em(42px);
+			}
+			
+		}
+		
+	button {
+		@include border-radius(0 3px 3px 0);
+		background-color: $primary-color;
+		border:none;
+		box-sizing: border-box; 
+		color:#fff;
+		font-family:$primary-font;
+		font-size:em(16px);
+		height:em(42px);
+		line-height:em(42px);
+		padding: 0 lh(.33);
+		position:absolute;
+		right:0;
+		top:0;
+		z-index:3;
+		
+		&:hover {
+			background-color: darken($primary-color,10%);
+			}
+			
+		@include respond-min($medium) {
+			padding: 0 lh(.66);
+			}
+			
+		}
+	[class^="icon-"]:before {
+		font-size:125%;
+		margin:0;
+		}
+		
+	}
+	
+
+	
+@include respond-min($large) {
+	.fixed {
+		-webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.50);
+		-moz-box-shadow: 0 8px 6px -6px  rgba(0,0,0,0.50);
+		box-shadow: 0 8px 6px -6px rgba(0,0,0,0.50);
+		}
+
+	.fixed-body {
+		padding-top: em(88px);
+		}
+	}
+
+@include respond-max(59.95em) {
+	.scroll-fix {
+		position: static !important; 
+		top: auto !important; 
+		width: auto !important; 
+		left: auto !important; 
+		}
+
+	}

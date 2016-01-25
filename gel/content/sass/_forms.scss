@@ -1,0 +1,518 @@
+
+// Forms markup
+//
+// Basic elements. Covers styles used for forms, such as the `<input>` and `<select>` elements.
+//
+// Markup:
+//<div class="alert alert--danger">
+//  <h2 class="beta">Please check the required details are completed</h2>
+//  <p>There was 1 error found in the information you supplied.</p>
+//  <ul>
+//    <li class="list__item list--numeric">
+//      <a tabindex="3" href="#exampleInputPassword2">Please supply details for 'Password'.</a>
+//    </li>
+//  </ul>
+//</div> 
+//<form class="form" role="form">
+//  <ul>
+//    <li>
+//      <label for="exampleText1">Textfield</label>
+//      <span class="help-block">Example help text</span>
+//      <input type="text" id="exampleText1" name="exampleText1" />
+//      <span class="field-validation-error">Please provide a value for example field</span>
+//    </li>
+//    <li>
+//      <label for="exampleInputEmail1">Email address</label>
+//      <span class="help-block">Example help text</span>
+//      <input type="email" placeholder="Enter email" title="Example help text" />
+//      <span class="field-validation-error">Please provide a value for example field</span>
+//    </li>
+//    <li>
+//      <label for="exampleInputPassword1">Password</label>
+//      <input type="password" placeholder="Password" id="exampleInputPassword1" />
+//    </li>
+//    <li>
+//      <label for="exampleTextarea1">Text area</label>	
+//      <textarea cols="30" rows="4" id="exampleTextarea1"></textarea>	
+//    </li>
+//    <li class="row">
+//      <label for="inlineInput1" class="col medium_12">Inline input</label>
+//      <div class="col medium_9">
+//        <input type="text" id="inlineInput1" /> 
+//      </div>
+//      <div class="col medium_3">
+//        <button class="btn btn--block" class="">Search</button>
+//      </div>
+//    </li>
+//    <li>
+//      <label for="exampleDropdown1">Dropdown</label>	
+//      <select id="exampleDropdown1">
+//        <option value="">Please select ...</option>
+//        <option value="Edinburgh">Edinburgh</option>
+//        <option value="Frankfurt">Frankfurt</option>
+//        <option value="Hong Kong">Hong Kong</option>
+//        <option value="Montreal">Montreal</option>
+//      </select>
+//    </li>
+//    <li>
+//      <label for="exampleInputFile">File input</label>
+//      <input type="file" id="exampleInputFile" />
+//    <li>
+//    <li>
+//      <fieldset>
+//        <legend>Checkbox</legend>	
+//        <label for="exampleCheckbox1">
+//          <input type="checkbox" checked="checked" value="Forms" id="exampleCheckbox1" /> 
+//          Forms
+//        </label>
+//        <label for="exampleCheckbox2">
+//          <input type="checkbox" value="Pages" id="exampleCheckbox2" /> 
+//          Pages
+//        </label>
+//        <label for="exampleCheckbox3">
+//          <input type="checkbox" value="Directories" id="exampleCheckbox3" /> 
+//          Directories
+//        </label>
+//      </fieldset>
+//    </li>
+//    <li>
+//      <fieldset>
+//        <legend>Radio</legend>	
+//        <label for="exampleradio1">
+//          <input type="radio" class="checkbox" value="One" id="xforms_Radio_0" /> 
+//          One
+//        </label>
+//        <label for="exampleradio2">
+//        <input type="radio" class="checkbox" checked="checked" value="Two" id="exampleradio2" /> 
+//          Two
+//        </label>
+//        <label for="exampleradio3">
+//          <input type="radio" class="checkbox" value="Three" id="exampleradio3" /> 
+//          Three
+//        </label>
+//      </fieldset>
+//    </li>
+//    <li class="cf">
+//      <button class="btn">Button default style</button>
+//      <button class="btn btn--primary">Button primary style</button>
+//      <button class="btn btn--secondary">Button secondary style</button>
+//    </li>
+//    <li class="cf">
+//      <input class="btn" type="submit" value="Input default style" />
+//      <input class="btn btn--primary" type="submit" value="Input primary style" />
+//      <input class="btn btn--secondary" type="submit" value="Input secondary style" />
+//    </li>
+//  </ul>
+//  
+//</form>
+//
+// Styleguide 6.0
+
+
+// Horizontal Form
+//
+//Horizontal form example introduction text to go here
+//
+//Markup:
+//<form class="form" role="form">
+//  <ul>
+//    <li class="row">
+//		  <label for="exampleInputEmail5" class="col medium_3">Email address</label>
+//		  <div class="col medium_9">
+//			  <input type="email" id="exampleInputEmail5"  placeholder="Enter email">
+//		  </div>
+//	  </li>
+//	  <li class="row">
+//		  <label for="exampleInputPassword5" class="col medium_3">Password</label>
+//		  <div class="col medium_9">
+//			  <input type="password" id="exampleInputPassword5" placeholder="Password">
+//		  </div>
+//	  </li>
+//    <li class="row">
+//      <label for="exampleInputFile5" class="col medium_3">File input</label>
+//	    <div class="col medium_9">
+//     	  <input type="file" id="exampleInputFile5">
+//     	  <p class="gamma">Example block-level help text here.</p>
+//      </div>
+//    </li>
+//    <li class="checkbox push_3">
+//      <label>
+//        <input type="checkbox"> Check me out
+//      </label>
+//    </li>
+//    <button type="submit" class="btn pull-right">Submit</button>
+//  </ul>
+//</form>
+//
+// Styleguide 6.1
+
+
+/* Basic styling on all basic form elements */ 
+	
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="file"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+select,
+textarea {
+	background-color: #f9f9f9;
+	border: 1px solid $light-grey-3;
+	color:$dark-grey-3;
+	font-family:$primary-font;
+	margin-bottom:lh(.33);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	-webkit-transition: -webkit-box-shadow 0.15s, border-color 0.15s ease-in-out;
+	-moz-transition: -moz-box-shadow 0.15s, border-color 0.15s ease-in-out;
+	transition: box-shadow 0.15s, border-color 0.15s ease-in-out; 
+	}
+		
+input:hover,
+select:hover,
+textarea:hover {
+	-webkit-box-shadow: 0 0 3px $mid-grey-1;
+	-moz-box-shadow: 0 0 3px $mid-grey-1;
+	box-shadow: 0 0 3px $mid-grey-1;
+	border-color: $mid-grey-1;
+	}
+		
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="email"]:focus,
+input[type="file"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+select:focus,
+textarea:focus {	
+	border-color: $primary-color;
+	background-color: #fafafa;
+	color:$dark-grey-3;
+	outline: none; 
+	-webkit-box-shadow: 0 0 3px $primary-color;
+	-moz-box-shadow: 0 0 3px $primary-color;
+	box-shadow: 0 0 3px $primary-color;
+	}
+		
+input[type="text"][disabled],
+input[type="password"][disabled],
+input[type="date"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="month"][disabled],
+input[type="week"][disabled],
+input[type="email"][disabled],
+input[type="number"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="time"][disabled],
+input[type="url"][disabled],
+select[disabled],
+textarea[disabled] {
+	background-color: #dddddd;
+	color:$mid-grey-1;
+	}
+	
+	
+.form {
+	@include clearfix();
+	display:block;
+	margin-bottom:lh(1);
+
+
+	legend  {
+		background-color:$light-grey-1;
+		color:$dark-grey-2;
+		display:block;
+		font-weight:bold;
+		margin-bottom:lh(.5);
+		padding:lh(.5) lh(1);
+		width:100%;
+		}
+			
+	ul {
+		display:block;
+		list-style-type:none;
+		}
+			
+	ul > li {
+		border-bottom:1px dotted $light-grey-2;
+		display:block;
+		margin-bottom:lh(.33);
+		margin-top:lh(.66);
+		padding-bottom:lh(.66);
+		padding-top:lh(.33);
+		width:100%;
+		}
+			
+	ul > li:last-child {
+		border-bottom:none;
+		}
+			
+	@include respond-min($medium) {
+		.error {
+			display:block;
+			}
+		}		
+			
+	label {
+		display:block;
+		font-size:em(20px);
+		line-height:1.2;
+		margin-bottom:lh(.25);
+		}
+		
+	input[type="text"],
+	input[type="password"],
+	input[type="date"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="month"],
+	input[type="week"],
+	input[type="email"],
+	input[type="file"],
+	input[type="number"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="time"],
+	input[type="url"],
+	select,
+	textarea {
+		max-width:100%;
+		padding:lh(.66);
+		width:100%;
+		}
+			
+	input[type="file"] {
+		min-width:em(240px);
+		padding:0;
+		width:auto;
+		}
+
+	select {
+		min-width:em(240px);
+		padding:lh(.33);
+		text-overflow: ellipsis;
+		width:auto;
+		}
+			
+	input[type="checkbox"],
+	input[type="radio"] {
+		background-color:transparent;
+		border:none;
+		clear:both;
+		display:block;
+		float:left;
+		margin-right:lh(.2);
+		margin-top:lh(.2);
+		padding:0;
+		width:auto;
+		}
+			
+	input[type="checkbox"] + label,
+	input[type="radio"] + label {
+		display:block;
+		float:left;
+		width:90%;
+		}
+			
+	textarea {
+		font-family:$font-family;
+		}
+			
+	.error {
+		color:$red;
+		}
+			
+	input.error {
+		border-color:$red;
+		color:#444;
+		background-color: #f2dede;
+		}
+
+	.btn {
+		height:em(52px);
+		width:auto;
+		}
+
+	.btn--block {
+		width:100%;
+		}
+
+		
+	}
+
+		
+
+.form__alert--danger {	
+	label {
+		color:$danger-color
+		}
+			
+	input {
+		border-color:$danger-color;
+		background-color:lighten($danger-color, 35%);
+		}
+			
+	}
+
+
+
+		
+
+.fbf-required {
+	color:$primary-color !important;
+	}
+
+
+.editor-content .contourField {
+	
+	h2 {
+		font-family:$primary-font;
+		font-size:em(20px);
+		}
+	}
+
+
+.editor-content {
+
+	.contourPageName {
+		color:$mid-grey-3;
+		font-family:$secondary-font;	
+		font-size:em(22px);
+		font-weight:normal;
+		line-height: 1.136;
+		margin-bottom:lh(1);
+
+		@include respond-min($medium) {
+			font-size:em(24px);
+			line-height:1.25;
+			}
+		
+		@include respond-min($large) {
+			font-size:em(28px);
+			line-height:1.1;
+			}
+		
+		}
+
+	}
+
+.contourPage {
+
+	.validation-summary-errors {
+	    background-color:#F2DEDE;
+		color:shade($danger-color,25%);
+		margin-bottom:lh(1);
+		padding:lh(.66) lh(1) lh(.66) lh(3.33);
+		position:relative;
+
+		&:before {
+			content: "\e83b";
+			display: inline-block;
+			font-family: "fontello";
+			font-size:em(32px);
+			font-style: normal;
+			font-variant: normal;
+			font-weight: normal;
+			line-height: 1em;
+			margin-left: 0.2em;
+			margin-right: 0.2em;
+			position:absolute;
+			left:em(12px);
+			text-align: center;
+			text-decoration: inherit;
+			text-transform: none;
+			top:em(12px);
+			width: 1em;
+			}
+
+
+		ul {
+			list-style-type: disc;
+			margin:0;
+			}
+
+		li {
+			color:shade($danger-color,25%);
+			display:block;
+			font-size:em(14px);
+			font-family:$primary-font-bold;
+			margin:0;
+			padding:lh(.16) 0;
+			}
+
+		}
+
+	}
+
+
+.contourField {
+	@include clearfix();
+	clear:both;
+	margin-bottom:lh(1);
+
+	.radiobuttonlist,
+	.checkboxlist {
+		display:block;
+		margin:lh(.66) 0;
+		}
+
+	.radiobuttonlist label,
+	.checkboxlist label {
+		font-size:em(16px);
+		}
+
+	.field-validation-error {
+		clear:both;
+		color:shade($danger-color,25%);
+		display:block;
+		font-family:$primary-font-bold;
+		margin:lh(-.33) 0 lh(1.33) 0;
+		}
+
+	.help-block {
+		color:$mid-grey-3;
+		font-size:em(14px);
+		display:block;
+		line-height:1.2;
+		margin:lh(-.33) 0 lh(.33) 0;
+		}
+
+	}
+
+.contourNavigation {
+	@include clearfix();
+	padding-bottom:lh(.25);
+	padding-top:lh(.25);
+
+	.btn {
+		width:auto;
+		}
+	}
+
+.contourIndicator {
+	color:$primary-color;
+	}
+
+.datepickerfield {
+	width:auto !important;
+	}
+	

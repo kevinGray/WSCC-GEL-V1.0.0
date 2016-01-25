@@ -1,0 +1,621 @@
+// Grid system
+//
+// Flexible, efficient, responsive layout 
+//
+//Styleguide 7.0
+
+// Using the grid
+//
+//<figure class="quote"><blockquote> The grid system is an aid, not a guarantee. It permits a number of possible uses and each designer can look for a solution appropriate to his personal style. But one must learn how to use the grid; it is an art that requires practice</blockquote><figcaption> <cite>Josef Muller-Brockmann</cite></figcaption></figure>
+//
+// A flexible responsive universal grid is the fundamental layout tool. This will enable users to create multi device layouts quickly and easily with proposed default 12-column nestable grid allowing a large range of layouts and templates across all required screen sizes. It provides a cohesive foundation and flexibility to deal with wide range of layout problems while maintaining a consistency across all products it is used in. Should the default 12 columns not prove adequate for the design task at hand then it can easily customised via the SASS based code to modify. 
+//
+// Styleguide 7.1
+
+// Default 12 col
+//
+// The default grid set up is 12 columns. Column width, gutter with and number of columns can all be customised in _grid.scss
+//
+//Markup:
+//<div class="cf text--center">
+//  <div class="col small_6 medium_4 large_1 bg-light-grey-2">
+//    <span class="show-for-small-only">6 col</span>
+//    <span class="show-for-medium-only">4 col</span>
+//    <span class="show-for-large-up">1 col</span>
+//  </div>
+//  <div class="col small_6 medium_4 large_1 bg-light-grey-2">
+//    <span class="show-for-small-only">6 col</span>
+//    <span class="show-for-medium-only">4 col</span>
+//    <span class="show-for-large-up">1 col</span>
+//  </div>
+//  <div class="col small_6 medium_4 large_1 bg-light-grey-2">
+//    <span class="show-for-small-only">6 col</span>
+//    <span class="show-for-medium-only">4 col</span>
+//    <span class="show-for-large-up">1 col</span>
+//  </div>
+//  <div class="col small_6 medium_4 large_1 bg-light-grey-2">
+//    <span class="show-for-small-only">6 col</span>
+//    <span class="show-for-medium-only">4 col</span>
+//    <span class="show-for-large-up">1 col</span>
+//  </div>
+//  <div class="col small_6 medium_4 large_1 bg-light-grey-2">
+//    <span class="show-for-small-only">6 col</span>
+//    <span class="show-for-medium-only">4 col</span>
+//    <span class="show-for-large-up">1 col</span>
+//  </div>
+//  <div class="col small_6 medium_4 large_1 bg-light-grey-2">
+//    <span class="show-for-small-only">6 col</span>
+//    <span class="show-for-medium-only">4 col</span>
+//    <span class="show-for-large-up">1 col</span>
+//  </div>
+//  <div class="col small_6 medium_4 large_1 bg-light-grey-2">
+//    <span class="show-for-small-only">6 col</span>
+//    <span class="show-for-medium-only">4 col</span>
+//    <span class="show-for-large-up">1 col</span>
+//  </div>
+//  <div class="col small_6 medium_4 large_1 bg-light-grey-2">
+//    <span class="show-for-small-only">6 col</span>
+//    <span class="show-for-medium-only">4 col</span>
+//    <span class="show-for-large-up">1 col</span>
+//  </div>
+//  <div class="col small_6 medium_4 large_1 bg-light-grey-2">
+//    <span class="show-for-small-only">6 col</span>
+//    <span class="show-for-medium-only">4 col</span>
+//    <span class="show-for-large-up">1 col</span>
+//  </div>
+//  <div class="col small_6 medium_4 large_1 bg-light-grey-2">
+//    <span class="show-for-small-only">6 col</span>
+//    <span class="show-for-medium-only">4 col</span>
+//    <span class="show-for-large-up">1 col</span>
+//  </div>
+//  <div class="col small_6 medium_4 large_1 bg-light-grey-2">
+//    <span class="show-for-small-only">6 col</span>
+//    <span class="show-for-medium-only">4 col</span>
+//    <span class="show-for-large-up">1 col</span>
+//  </div>
+//  <div class="col small_6 medium_4 large_1 bg-light-grey-2">
+//    <span class="show-for-small-only">6 col</span>
+//    <span class="show-for-medium-only">4 col</span>
+//    <span class="show-for-large-up">1 col</span>
+//  </div>
+//</div>
+//
+// Styleguide 7.2
+
+
+// Nesting the grid
+//
+//Markup:
+//<div class="cf push--bottom">          
+//  <div class="col large_8 bg-light-grey-1 soft border">
+//    <p class="show-on-medium alpha push--bottom">
+//      This is an eight column section, starting with this paragraph.
+//      Below this you'll find another row with two sections.
+//    </p>
+//    <div class="row">
+//      <div class="col medium_6 bg-light-grey-1 border push--bottom">
+//        <img src="http://placehold.it/500x300/666666/cccccc" class="push-half--bottom">
+//        <h3 class="alpha primary-font soft-half--sides">
+//          Section (.medium_6)
+//        </h3>
+//        <p class="soft-half--sides">
+//          This is a nested row with two six column sections.
+//        </p>
+//      </div>
+//      <div class="col medium_6 bg-light-grey-1 border push--bottom">
+//        <img src="http://placehold.it/500x300/666666/cccccc" class="push-half--bottom">
+//        <h3 class="alpha primary-font soft-half--sides">
+//          Section (.medium_6)
+//        </h3>
+//        <p class="soft-half--sides">
+//          This is a nested row with two six column sections.
+//        </p>
+//      </div>
+//    </div>
+//    <p class="alpha push--bottom">
+//      Now the nested row has been closed, and we're back to the original eight column section.
+//    </p>
+//  </div>
+//  <div class="col large_4 bg-light-grey-1 soft border">
+//    <p class="alpha">
+//      This is an 4 column section
+//    </p>
+//    <div class="row">
+//      <div class="col small_4 border">
+//        <img src="http://placehold.it/150x90/666666/cccccc">
+//      </div>
+//      <div class="col small_8 border">
+//        <p class="gamma">
+//          This is a callout with three columns on the left (for the avatar) and nine columns here for the text. This row is inside the four column. 
+//        </p>
+//      </div>
+//    </div>
+//  </div>
+//</div>
+//
+// Styleguide 7.3
+
+// Customising the grid
+//
+// <h2>Grid system</h2>
+// <p>_grid.scss contains a repsonive grid. The default settings are 12 columns and 100% full width. </p>
+// <p>Each set of columns must be contained in a wrapper. Each column width is created by adding classes to the element. One class to declare this is a column <code>class="col"</code>,  and successive classes depending on columns required at small, medium, large and xlarge screen sizes eg <code>class="col medium_6 large_4 xlarge_3"</code></p>
+// <p>Each set of columns must be contained in a wrapper. Each column width is created by adding classes to the element. One class to declare this is a column <code>class="col"</code>,  and successive classes depending on size required at small, medium, large and xlarge screen sizes eg <code>class="col medium_6 large_4 xlarge_3"</code></p>
+// <h3>Nesting the grid.</h3>
+// <p>A <code>.row </code>class must be applied to the containing element of the nested columns.</p>
+// <h3>Customising the grid.</h3>
+// <p><code> _grid.scss</code>  contains default variables which you can freely override to suit the project layout requirements.</p>
+// <ul>
+// <li><code> $column-width: 70px</code></li>
+// <li><code> $gutter-width: 30px</code></li>
+// <li><code> $columns: 12</code></li>
+// </ul>
+// <p>These pixel values are then converted to the appropriate percentage values.</p>
+// <h3>Screen sizes</h3>
+// <ul>
+// <li><code> $medium:48em;</code>(768px)</li>
+// <li><code> $large:60em;</code>(960px)</li>
+// <li><code> $xlarge:90em;</code>(1440px)</li>
+// </ul>
+//
+// Styleguide 7.3
+
+// Defaults which you can freely override
+$column-width: 72px;
+$gutter-width: 24px;
+$columns: 12;
+
+
+// Utility function — you should never need to modify this
+@function gridsystem-width($columns:$columns) {
+	@return ($column-width * $columns) + ($gutter-width * $columns);
+}
+
+// Set $total-width to 100% for a fluid layout
+$total-width: gridsystem-width($columns);
+
+// Uncomment these two lines and the star-hack width/margin lines below to enable sub-pixel fix for IE6 & 7. See http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
+// $min-width: 999999;
+// $correction: 0.5 / $min-width * 100;
+
+// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
+@mixin clearfix() {
+	*zoom:1;
+
+	&:before,
+	&:after {
+	    content:"";
+	    display:table;
+	}
+	&:after {
+	    clear:both;
+	}
+}
+
+
+//////////
+// GRID //
+//////////
+
+body {
+	width: 100%;
+	}
+
+@mixin row($columns:$columns) {
+	display: block;
+	width: $total-width*(($gutter-width + gridsystem-width($columns))/gridsystem-width($columns));
+	margin-left: $total-width*((($gutter-width*.5)/gridsystem-width($columns))*-1) !important;
+	margin-right: $total-width*((($gutter-width*.5)/gridsystem-width($columns))*-1) !important;
+	// *width: $total-width*(($gutter-width + gridsystem-width($columns))/gridsystem-width($columns))-$correction;
+	// *margin-left: $total-width*((($gutter-width*.5)/gridsystem-width($columns))*-1)-$correction;
+	// *margin-right: $total-width*((($gutter-width*.5)/gridsystem-width($columns))*-1)-$correction;
+	@include clearfix();
+	}
+	
+@mixin column($x,$columns:$columns) {
+	width: $total-width*(((($gutter-width+$column-width)*$x)-$gutter-width) / gridsystem-width($columns));
+	// *width: $total-width*(((($gutter-width+$column-width)*$x)-$gutter-width) / gridsystem-width($columns))-$correction;
+	// *margin-left: 0 $total-width*(($gutter-width*.5)/gridsystem-width($columns))-$correction;
+	// *margin-right: 0 $total-width*(($gutter-width*.5)/gridsystem-width($columns))-$correction;
+	}
+		
+@mixin push($offset:1) {
+	margin-left: $total-width*((($gutter-width+$column-width)*$offset) / gridsystem-width($columns)) + $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+	}
+	
+@mixin pull($offset:1) {
+	margin-right: $total-width*((($gutter-width+$column-width)*$offset) / gridsystem-width($columns)) + $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+	}
+
+
+	
+/*=VARIABLES - GRID 
+------------------------------------------------*/
+$total-width: 100%;
+
+
+/* GRID - BREAKPOINTS
+------------------------------------------------*/
+
+$medium:48em;
+$large:60em;
+$xlarge:90.075em;
+
+
+
+/* GRID - CLASSES
+------------------------------------------------*/
+
+.col {				
+	float: left;
+	margin-left: $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+	margin-right: $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+	}
+	
+.col--centered {
+	margin-left:auto !important;
+	margin-right:auto !important;
+	}
+
+.small_1 {	
+	@include column(1);	
+	}
+	
+.small_2 {	
+	@include column(2);	
+	}
+	
+.small_3 {	
+	@include column(3);	
+	}
+	
+.small_4 {	
+	@include column(4);	
+	}
+	
+.small_5 {	
+	@include column(5);	
+	}
+	
+.small_6 {	
+	@include column(6);	
+	}
+	
+.small_7 {	
+	@include column(7);	
+	}
+	
+.small_8 {	
+	@include column(8);	
+	}
+	
+.small_9 {	
+	@include column(9);	
+	}
+	
+.small_10 {	
+	@include column(10);	
+	}
+	
+.small_12 {	
+	@include column(12);
+	display:block;
+	}
+	
+.medium_1 {	
+	@include respond-min($medium) {
+		@include column(1);
+		}		
+	}
+	
+.medium_2 {	
+	@include respond-min($medium) {
+		@include column(2);
+		}		
+	}
+	
+.medium_3 {	
+	@include respond-min($medium) {
+		@include column(3);
+		}		
+	}
+	
+.medium_4 {	
+	@include respond-min($medium) {
+		@include column(4);
+		}		
+	}
+	
+.medium_5 {	
+	@include respond-min($medium) {
+		@include column(5);
+		}		
+	}
+	
+.medium_6 {	
+	@include respond-min($medium) {
+		@include column(6);
+		}		
+	}
+	
+.medium_7 {	
+	@include respond-min($medium) {
+		@include column(7);
+		}		
+	}
+	
+.medium_8 {	
+	@include respond-min($medium) {
+		@include column(8);
+		}		
+	}
+	
+.medium_9 {	
+	@include respond-min($medium) {
+		@include column(9);
+		}		
+	}
+	
+.medium_10 {	
+	@include respond-min($medium) {
+		@include column(10);
+		}		
+	}
+	
+.medium_11 {	
+	@include respond-min($medium) {
+		@include column(11);
+		}		
+	}
+	
+.medium_12 {
+	@include respond-min($medium) {
+		@include column(12);
+		}
+	@include respond-max($large) {
+		float:none;
+		}	
+	}
+
+.large_1 {	
+	@include respond-min($large) {
+		@include column(1);
+		}			
+	}
+
+.large_2 {	
+	@include respond-min($large) {
+		@include column(2);
+		}			
+	}
+	
+.large_3 {	
+	@include respond-min($large) {
+		@include column(3);
+		}			
+	}
+	
+.large_4 {
+	@include respond-min($large) {
+		@include column(4);
+		}
+	}
+	
+.large_5 {
+	@include respond-min($large) {
+		@include column(5);
+		}
+	}
+	
+.large_6 {	
+	@include respond-min($large) {
+		@include column(6);
+		}		
+	}
+	
+.large_7 {
+	@include respond-min($large) {
+		@include column(7);
+		}
+	}
+	
+.large_8 {
+	@include respond-min($large) {
+		@include column(8);
+		}
+	}
+		
+.large_9 {
+	@include respond-min($large) {
+		@include column(9);
+		}
+	}
+	
+.large_10 {
+	@include respond-min($large) {
+		@include column(10);
+		}
+	}
+	
+.large_11 {
+	@include respond-min($large) {
+		@include column(10);
+		}
+	}
+	
+.large_12 {
+	@include respond-min($large) {
+		@include column(12);
+		display:block;
+		}
+	}
+
+.xlarge_1 {
+	@include respond-min($xlarge) {
+		@include column(1);
+		}
+	}
+	
+.xlarge_2 {
+	@include respond-min($xlarge) {
+		@include column(2);
+		}
+	}
+	
+.xlarge_3 {
+	@include respond-min($xlarge) {
+		@include column(3);
+		}
+	}
+	
+.xlarge_4 {
+	@include respond-min($xlarge) {
+		@include column(4);
+		}
+	}
+	
+.xlarge_5 {
+	@include respond-min($xlarge) {
+		@include column(5);
+		}
+	}
+	
+.xlarge_6 {
+	@include respond-min($xlarge) {
+		@include column(6);
+		}
+	}
+
+.xlarge_7 {
+	@include respond-min($xlarge) {
+		@include column(7);
+		}
+	}
+	
+.xlarge_8 {
+	@include respond-min($xlarge) {
+		@include column(8);
+		}
+	}
+	
+.xlarge_9 {
+	@include respond-min($xlarge) {
+		@include column(9);
+		}
+	}
+	
+.xlarge_10 {
+	@include respond-min($xlarge) {
+		@include column(10);
+		}
+	}
+
+.push_1 {
+	@include respond-min($medium) {
+		@include push(1);
+		}
+	}
+
+.push_1--medium {
+	@include respond-min($medium) {
+		@include push(1);
+		}
+	}
+
+.push_1--large {
+	@include respond-min($large) {
+		@include push(1);
+		}
+	}
+
+.push_1--xlarge {
+	@include respond-min($xlarge) {
+		@include push(1);
+		}
+	}
+
+.push_2 {
+	@include respond-min($medium) {
+		@include push(2);
+		}
+	}
+
+.push_2--medium {
+	@include respond-min($medium) {
+		@include push(2);
+		}
+	}
+
+.push_2--large {
+	@include respond-min($large) {
+		@include push(2);
+		}
+	}
+
+.push_3 {
+	@include respond-min($medium) {
+		@include push(3);
+		}
+	}
+
+.push_3--large {
+	@include respond-min($large) {
+		@include push(3);
+		}
+	}
+
+.push_4 {
+	@include respond-min($medium) {
+		@include push(4);
+		}
+	}
+	
+.push_4--large {
+	@include respond-min($large) {
+		@include push(4);
+		}
+	}
+	
+.pull_1 {
+	@include respond-min($medium) {
+		@include pull(1);
+		}
+	}
+
+.pull_1--large {
+	@include respond-min($large) {
+		@include pull(1);
+		}
+	}
+
+.pull_1--xlarge {
+	@include respond-min($xlarge) {
+		@include pull(1);
+		}
+	}
+	
+.pull_2 {
+	@include respond-min($medium) {
+		@include pull(2);
+		}
+	}
+
+.pull_3 {
+	@include respond-min($medium) {
+		@include pull(3);
+		}
+	}
+
+.pull_4 {
+	@include respond-min($medium) {
+		@include pull(4);
+		}
+	}
+		
+.row {
+	@include clearfix();
+	@include respond-min($medium) {
+		@include row;
+		}
+	}
+	

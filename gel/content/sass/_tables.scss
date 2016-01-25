@@ -1,0 +1,322 @@
+// Tables
+//
+// Styleguide 15.0
+
+// Tables
+//
+// For basic styling-light padding and only horizontal dividers-add the base class `.table` to any `<table>`.
+//
+// Markup:
+// <table class="table {$modifiers}">
+//   <thead>
+//     <tr>
+//       <th>No.</th>
+//       <th>First Name</th>
+//       <th>Last Name</th>
+//       <th>Username</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//       <td>1</td>
+//       <td>Mark</td>
+//       <td>Otto</td>
+//       <td>@mdo</td>
+//     </tr>
+//     <tr>
+//       <td>2</td>
+//       <td>Jacob</td>
+//       <td>Thornton</td>
+//       <td>@fat</td>
+//     </tr>
+//     <tr>
+//       <td>3</td>
+//       <td>Larry</td>
+//       <td>the Bird</td>
+//       <td>@twitter</td>
+//     </tr>
+//   </tbody>
+// </table>
+//
+//
+// Styleguide 15.1
+
+// Table styles
+//
+// Add any of the following classes to the `.table` base class.
+//
+// .table--hover     - Enable a hover state on table rows within a `<tbody>`.
+// .table--condensed - Makes tables more compact by cutting cell padding in half.
+//
+// Markup:
+// <table class="table {$modifiers}">
+//   <thead>
+//     <tr>
+//       <th>No.</th>
+//       <th>First Name</th>
+//       <th>Last Name</th>
+//       <th>Username</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//       <td>1</td>
+//       <td>Mark</td>
+//       <td>Otto</td>
+//       <td>@mdo</td>
+//     </tr>
+//     <tr>
+//       <td>2</td>
+//       <td>Jacob</td>
+//       <td>Thornton</td>
+//       <td>@fat</td>
+//     </tr>
+//     <tr>
+//       <td>3</td>
+//       <td>Larry</td>
+//       <td>the Bird</td>
+//       <td>@twitter</td>
+//     </tr>
+//   </tbody>
+// </table>
+//
+// Styleguide 15.2
+
+
+.table, 
+.editor-content table {
+	line-height:1.25;
+	margin:lh(1) 0;
+	width:100%;
+		
+	th {
+		background-color:$light-grey-3;
+		color:$dark-grey-3;
+		font-family:$primary-font-bold;
+		font-weight:normal;
+		padding:lh(.66) lh(.33);
+		text-align:left;
+		vertical-align:bottom;
+
+		@include respond-min(60em) {
+			padding:lh(.5) lh(.33);
+			}
+		}
+		
+	td {
+		border-bottom:1px solid $light-grey-2;
+		padding:lh(.66) lh(.33);
+		text-align:left;
+		vertical-align:middle;
+
+		ul, 
+		ol {
+			color:inherit;
+			font-size:100%;
+			margin-bottom:0;
+			margin-top:0;
+			li {
+				margin-bottom:lh(.15);
+				}
+			}
+
+		@include respond-min(60em) {
+			padding:lh(.5) lh(.33);
+			}
+
+
+		}
+		
+	tr:nth-child(even) td {
+		background-color: $light-grey-1;
+		}
+		
+	 tr:nth-child(odd) td {
+		 background-color: #FFF
+		 }
+		 
+	}
+
+
+
+// CONDENSED TABLE W/ HALF PADDING
+// -------------------------------
+
+.table--condensed {
+	font-size:em(14px);
+	th, td {
+		padding:lh(.16) 1.5%;
+		}
+	}
+
+
+// ZEBRA-STRIPING
+// --------------
+
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+.table--striped {
+  tbody {
+    > tr:nth-child(even) > td,
+    > tr:nth-child(even) > th {
+      background-color: $light-grey-1;
+    }
+  }
+}
+
+
+// HOVER EFFECT
+// ------------
+// Placed here since it has to come after the potential zebra striping
+.table--hover {
+  tbody {
+    tr:hover > td,
+    tr:hover > th {
+      background-color: $light-grey-2;
+    }
+  }
+}
+
+
+
+/*! Tablesaw - v0.1.6 - 2014-07-23
+* https://github.com/filamentgroup/tablesaw
+* Copyright (c) 2014 Filament Group; Licensed MIT */
+
+table.tablesaw {
+	empty-cells: show;
+	max-width: 100%;
+	width: 100%;
+	}
+
+.tablesaw {
+	border-collapse: collapse;
+	width: 100%;
+	}
+
+/* Structure */
+
+.tablesaw {
+	border: 0;
+	padding: 0;
+	}
+
+.tablesaw th,
+.tablesaw td {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: .5em .7em;
+	}
+
+.tablesaw thead tr:first-child th {
+	padding-top: .9em;
+	padding-bottom: .7em;
+	}
+
+/* Table rows have a gray bottom stroke by default */
+
+.tablesaw-stack tbody tr {
+	border-top:1px solid $light-grey-2;
+	}
+
+.tablesaw-stack td .tablesaw-cell-label,
+.tablesaw-stack th .tablesaw-cell-label {
+	display: none;
+	}
+
+/* Mobile first styles: Begin with the stacked presentation at narrow widths */
+
+
+  /* Show the table cells as a block level element */
+
+	.tablesaw-stack td,
+	.tablesaw-stack th {
+		text-align: left;
+		display: block;
+		}
+
+	.tablesaw-stack tr {
+		clear: both;
+		display: table-row;
+		}
+
+  /* Make the label elements a percentage width */
+
+	.tablesaw-stack td .tablesaw-cell-label,
+	.tablesaw-stack th .tablesaw-cell-label {
+		display: block;
+		display: inline-block;
+		min-width: 35%;
+		padding: 0 .6em 0 0;
+		}
+
+  /* For grouped headers, have a different style to visually separate the levels by classing the first label in each col group */
+
+	.tablesaw-stack th .tablesaw-cell-label-top,
+	.tablesaw-stack td .tablesaw-cell-label-top {
+		display: block;
+		margin: .4em 0;
+		padding: .4em 0;
+		}
+
+	.tablesaw-cell-label {
+		display: block;
+		}
+
+	/* Avoid double strokes when stacked */
+
+	.tablesaw-stack tbody th.group {
+		margin-top: -1px;
+		}
+
+	/* Avoid double strokes when stacked */
+
+	.tablesaw-stack th.group b.tablesaw-cell-label {
+		display: none !important;
+		}
+
+
+@include respond-max(47.9375em) {
+	
+	.tablesaw-stack tbody tr {
+		border-bottom: lh(1) solid transparent;
+		}
+
+	.tablesaw-stack thead td,
+	.tablesaw-stack thead th {
+		display: none;
+		}
+
+	.tablesaw-stack tbody td,
+	.tablesaw-stack tbody th {
+		clear: left;
+		float: left;
+		width: 100%;
+		}
+
+	}
+
+/* Media query to show as a standard table at 768px or wider */
+
+@include respond-min(48em) {
+  .tablesaw-stack tr {
+    display: table-row;
+  }
+
+  /* Show the table header rows */
+
+  .tablesaw-stack td,
+  .tablesaw-stack th,
+  .tablesaw-stack thead td,
+  .tablesaw-stack thead th {
+    display: table-cell;
+    margin: 0;
+  }
+
+  /* Hide the labels in each cell */
+
+  .tablesaw-stack td .tablesaw-cell-label,
+  .tablesaw-stack th .tablesaw-cell-label {
+    display: none !important;
+  }
+}

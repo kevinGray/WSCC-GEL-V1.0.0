@@ -1,0 +1,498 @@
+// Lists
+//
+// Plain list
+//
+//Markup:
+//<ul class="list">
+//  <li class="list__item">
+//    List item
+//  </li>
+//  <li class="list__item">
+//    List item
+//  </li>
+//  <li class="list__item">
+//    List item
+//  </li>
+//  <li class="list__item">
+//    List item
+//  </li>
+//  <li class="list__item">
+//    List item
+//  </li>
+//  <li class="list__item">
+//    List item
+//  </li>
+//</ul>
+//
+// Styleguide 11.0
+
+
+
+// Round bullets
+//
+//Markup:
+//<ul class="list list--bullets-round list--striped">
+//  <li class="list__item">
+//    List item
+//  </li>
+//  <li class="list__item">
+//    List item
+//  </li>
+//  <li class="list__item">
+//    List item
+//  </li>
+//  <li class="list__item">
+//    List item
+//  </li>
+//  <li class="list__item">
+//    List item
+//  </li>
+//  <li class="list__item">
+//    List item
+//  </li>
+//</ul>
+//
+// Styleguide 11.1
+
+
+
+// Square bullets
+//
+//Markup:
+//<ul class="list list--bullets-square">
+//  <li class="list__item">
+//    List item
+//  </li>
+//  <li class="list__item">
+//    List item
+//  </li>
+//  <li class="list__item">
+//    List item
+//  </li>
+//</ul>
+//
+// Styleguide 11.2
+
+
+
+// Numeric
+//
+//Markup:
+//<ol class="list list--numeric">
+//  <li class="list__item">
+//    List item
+//  </li>
+//  <li class="list__item">
+//    List item
+//  </li>
+//  <li class="list__item">
+//    List item
+//  </li>
+//</ol>
+//
+// Styleguide 11.3
+
+
+
+
+// Alpha 
+//
+// Markup:
+//<ol class="list list--alpha">
+//  <li class="list__item">
+//    List item
+//  </li>
+//  <li class="list__item">
+//    List item
+//  </li>
+//  <li class="list__item">
+//    List item
+//  </li>
+//</ol>
+//
+// Styleguide 11.4
+
+
+
+
+
+// Action link iconed list
+//
+//
+// Markup:
+//<ul class="list list--iconned">
+//  <li class="list__item">
+//    <a href="/" class="list__link--iconned dark-grey-1">
+//      <span class="icon icon-angle-right"></span>
+//      Action link iconed list item
+//    </a>
+//  </li>
+//  <li class="list__item">
+//    <a href="/" class="list__link--iconned dark-grey-1">
+//      <span class="icon icon-angle-right"></span>
+//      Action link iconed listitem
+//    </a>
+//  </li>
+//  <li class="list__item">
+//    <a href="/" class="list__link--iconned dark-grey-1">
+//      <span class="icon icon-angle-right"></span>
+//      Action link iconed list item
+//    </a>
+//  </li>
+//  <li class="list__item">
+//    <a href="/" class="list__link--iconned dark-grey-1">
+//      <span class="icon icon-angle-right"></span>
+//      Action link iconed listitem
+//    </a>
+//  </li>
+//</ul>
+//
+// Styleguide 11.5
+
+
+
+.list {
+	@include clearfix();
+	list-style-type:none;
+		
+	@include respond-min(48em) {
+		margin-bottom:lh(1);
+		}
+		
+	.list__item:last-child {
+		border-bottom:none;
+		}
+			
+	}
+	
+.list {
+	list-style-type:none;
+	margin:0;
+	}
+	
+.list__item {
+	border-bottom:1px dotted #ddd;
+	padding:lh(.166) 0;
+	}
+	
+.list--bullets-round {
+	list-style-type:disc;
+	}
+	
+.list--bullets-square {
+	list-style-type: square;
+	}
+	
+.list--numeric {
+	list-style-type: decimal;
+	margin-left:lh(1);
+	}
+	
+.list--alpha {
+	list-style-type: lower-alpha;
+	margin-left:lh(1);
+	}
+	
+.list--iconed {
+	list-style-type: none;
+	margin-left:lh(1);
+	}
+
+
+
+
+
+
+
+.list__item--selected .list__link {
+	background-color:$blue;
+	color:#fff;	
+	}
+	
+.list__link {
+	display:block;
+	padding:lh(.5) 0;
+	text-decoration:none;
+	word-wrap: break-word;
+
+	&:hover {
+		background-color:$light-grey-1;
+
+		}
+		
+	}
+
+
+.list__link--iconed {
+	display:block;
+	position:relative;
+	padding:lh(.15) lh(.1) lh(.15) lh(1);
+
+	.icon {
+		position:absolute;
+		top:lh(.15);
+		left:0;
+		}
+
+	}
+
+.list__title,
+.list__link .list__title {
+	display:block;
+	font-family:$primary-font;
+	word-wrap: break-word;
+	&:hover {
+		opacity:0.8;
+		text-decoration:underline;
+		}
+	}
+
+	
+.list__desc {
+	color:$mid-grey-3;
+	display:block;
+	font-size:em(14px);
+	line-height:lh(14/16);
+	}
+		
+
+.list--inline {
+	@include clearfix();
+	display:block;
+	
+	.list__item {
+		border-bottom:none;
+		display:block;
+		float:left;
+		}
+		
+	.list__link {
+		border-bottom:none;	
+		display:block;
+		padding:0 lh(.15);
+		
+		&:hover {
+			text-decoration:underline;
+			}
+
+		}
+		
+	}
+	
+	
+.list--iconned {
+	
+	.list__item {
+		border-bottom:1px solid #fff;
+		display:block;
+		padding:0;
+		position:relative;
+		}
+		
+	.icon {
+		background-color:$light-grey-2;
+		bottom:0;
+		color: $dark-grey-3;
+		display: inline-block;
+		height:100%;
+		line-height:lh(2);
+		left:0;
+		position:absolute;
+		text-align: center;
+		top:0;
+		width:lh(2);
+		}
+		
+	}
+	
+	
+.list__link--iconned {
+	background-color:$light-grey-1;
+	display:block;
+	font-family:$primary-font;
+	margin-bottom:1px;
+	padding:lh(.5) lh(.5) lh(.5) lh(2.33);
+	position:relative;
+		
+	@include respond-min(60em) {
+		padding:lh(.5) lh(.5) lh(.5) lh(2.66);
+		&:hover {
+			background-color:rgba(0, 0, 0, .15);
+			}
+			
+		}
+	
+	}
+	
+.list__link--iconned[href^="#"],
+.list--blockgrid__link[href^="#"] {
+	color:$mid-grey-1 !important;
+	* {
+		color:$mid-grey-1 !important;
+		}
+		
+	}
+			
+.list--blockgrid  {
+	@include clearfix();
+	}
+
+
+.list--blockgrid--home  {
+	.list--blockgrid__item {
+		height:em(125px);
+
+		@include respond-min($medium) {
+			height:em(190px);
+			}	
+
+		@include respond-min($xlarge) {
+			height:em(180px);
+			}
+
+		}
+
+	}
+	
+.list--blockgrid__item {
+	border-right:1px dotted $light-grey-3;
+	display:block;
+	float:left;
+	margin-bottom:lh(.66);
+	min-height:lh(3);
+	padding-left:2%;
+	padding-right:2%;
+	width:50%;
+
+	&:nth-child(1),
+	&:nth-child(2) {
+		.list--blockgrid__link {
+			border-top:none;
+			}
+		}
+
+	@include respond-max($medium) {
+		&:nth-child(even) {
+			border-right:none;
+			}	
+
+		}
+			
+	@include respond-min($medium) {
+		margin-bottom:lh(.33);
+		min-height:lh(7);
+		width:33.333%;
+
+		&:nth-child(3n) {
+			border-right:none;
+			}
+
+		&:nth-child(3) {
+			.list--blockgrid__link {
+				border-top:none;
+				}
+			}
+			
+		}
+		
+	@include respond-min($large) {
+		padding-left:1%;
+		padding-right:1%;
+		width:25%;
+		
+		&:nth-child(3n) {
+			border-right:1px dotted $light-grey-3;
+			}
+			
+		&:nth-child(4n) {
+			border-right:none;
+			}
+
+		&:nth-child(4) {
+			.list--blockgrid__link {
+				border-top:none;
+				}
+			}
+			
+		}
+
+	@include respond-min($xlarge) {
+		min-height:lh(5);
+		padding-left:2%;
+		padding-right:2%;
+		}
+		
+	}
+	
+.list--blockgrid__link {
+	-webkit-transition: background 0.25s linear;
+	-moz-transition: background 0.25s linear;
+	-ms-transition: background 0.25s linear;
+	-o-transition: background 0.25s linear;
+	transition: background 0.25s linear;
+	
+	background-color:#fff;
+	border-top:1px dotted $light-grey-3;
+	display:block;
+	padding:lh(.25);
+		
+	&:hover {
+		background-color:$light-grey-1;
+		color:shade($primary-color,25%);
+		text-decoration:none;
+		
+		.list--panel__icon {
+			background-color:$secondary-color;
+			color:#fff;
+			}
+			
+		}
+		
+	}
+	
+.list--blockgrid__title {
+	display:block;
+	padding:0 0 lh(.15) 0;
+	}
+	
+.list--blockgrid__icon {
+	@include border-radius(50%);
+	background-color:$light-grey-1;
+	color: $secondary-color;
+	display: inline-block;
+	font-size: 16px;
+	height: 24px;
+	left:0;
+	line-height: 24px;
+	text-align: center;
+	top:lh(.25);
+	width: 24px;
+	}
+	
+.list--news {
+	.list--item {
+		border-top:2px solid $primary-color;
+		padding-top:lh(.25);
+		}
+	}
+	
+	
+.list__link--tag {
+	@include border-radius(3px);
+	background-color:$light-grey-2;
+	color:$dark-grey-2;
+	display:block;
+	margin-bottom:lh(.66);
+	margin-right:lh(.33);
+	padding:lh(.33) lh(.66);
+	&:hover {
+		color:$primary-color;
+		}
+		
+	&:visited {
+		color:$dark-grey-2;
+		}
+		
+	}
+
+

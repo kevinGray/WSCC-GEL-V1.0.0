@@ -1,0 +1,42 @@
+$old-ie: true;
+$fix-mqs: 75em;
+
+@import 'all';
+
+#buorg{	
+
+	&.buorg {
+		position:absolute;
+		width:100%;
+		top:0;
+		left:0px;
+		border-bottom:0;
+		background:#FDF2AB;
+		text-align:center;
+		cursor:pointer;
+		font-family: Arial,Helvetica,sans-serif; color: #3f9CC3;
+		font-size: 1.1em;
+		height: auto;
+	}
+
+	&.buorg div {
+		padding:20px 30px;
+	}
+
+	.buorg a {
+		color:#3f9CC3;
+		text-decoration:underline;
+	}
+
+	#buorgclose {
+		position: absolute;
+		right: .5em;
+		top:.2em;
+		height: 20px;
+		width: 12px;
+		font-weight: bold;
+		font-size:21px;
+		padding:0;
+	}
+
+}

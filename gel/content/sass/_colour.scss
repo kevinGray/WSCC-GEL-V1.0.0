@@ -1,0 +1,510 @@
+// Colour
+//
+// Colour any object foreground or background with pre-defined css classes based on our palette.
+//
+// Styleguide 5.0
+
+
+// Primary Colours
+//
+//
+//
+//<div class="row text--center alpha dark-grey-1 push--bottom items-container">
+//  <div class="col small_6 medium_3 item">
+//    <div class="white bg-primary-color circle circle--large col--centered">Blue</div>
+//    <div class="gamma">
+//      <strong>Hex</strong> 327c9c <br />
+//      <strong>CSS</strong> .blue, bg-blue, .primary-color, bg-primary-color
+//    </div>
+//  </div>
+//  <div class="col small_6 medium_3 item">
+//    <div class="white bg-secondary-color circle circle--large col--centered">Green</div>
+//    <div class="gamma">
+//      <strong>Hex</strong> 97cb3f <br />
+//      <strong>CSS</strong> .green, bg-green, .secondary-color, bg-secondary-color
+//    </div>
+//  </div>
+//  <div class="col small_6 medium_3 item">
+//    <div class="white bg-diesel circle circle--large col--centered">Diesel</div>
+//    <div class="gamma">
+//      <strong>Hex</strong> 4f6177 <br />
+//      <strong>CSS</strong> .Diesel, bg-diesel
+//    </div>
+//  </div>
+//  <div class="col small_6 medium_3 item">
+//    <div class="dark-grey-1 bg-beige circle circle--large col--centered">Beige</div>
+//    <div class="gamma">
+//      <strong>Hex</strong> f0e5dc <br />
+//      <strong>CSS</strong> .beige, .bg-beige
+//    </div>
+//  </div>
+//</div>
+//
+// Styleguide 5.1
+
+
+
+
+// Secondary Colours
+//
+// A palette of neutral greys
+//
+//<div class="row text--center alpha dark-grey-1 push--bottom items-container">
+//  <div class="col small_6 medium_3 item">
+//    <div class="white bg-dark-grey-3 circle circle--large col--centered">Dark grey 3</div>
+//    <div class="gamma">
+//      <strong>CSS</strong> .dark-grey-3, .bg-dark-grey-3
+//    </div>
+//  </div>
+//  <div class="col small_6 medium_3 item">
+//    <div class="white bg-dark-grey-2 circle circle--large col--centered">Dark grey 2</div>
+//    <div class="gamma">
+//      <strong>CSS</strong> .dark-grey-2, .bg-dark-grey-2
+//    </div>
+//  </div>
+//  <div class="col small_6 medium_3 item">
+//    <div class="white bg-dark-grey-1 circle circle--large col--centered">Dark grey 1</div>
+//    <div class="gamma">
+//      <strong>CSS</strong> .dark-grey-1, .bg-dark-grey-1
+//    </div>
+//  </div>
+//</div>
+//<div class="row text--center alpha dark-grey-1 push--bottom items-container">
+//  <div class="col small_6 medium_3 item">
+//    <div class="white bg-mid-grey-3 circle circle--large col--centered">Mid grey 3</div>
+//    <div class="gamma">
+//      <strong>CSS</strong> .mid-grey-3, .bg-mid-grey-3
+//    </div>
+//  </div>
+//  <div class="col small_6 medium_3 item">
+//    <div class="white bg-mid-grey-2 circle circle--large col--centered">Mid grey 2</div>
+//    <div class="gamma">
+//      <strong>CSS</strong> .mid-grey-2, .bg-mid-grey-2
+//    </div>
+//  </div>
+//  <div class="col small_6 medium_3 item">
+//    <div class="white bg-mid-grey-1 circle circle--large col--centered">Mid grey 1</div>
+//    <div class="gamma">
+//      <strong>CSS</strong> .mid-grey-1, .bg-mid-grey-1
+//    </div>
+//  </div>
+//</div>
+//<div class="row text--center alpha dark-grey-1 push--bottom items-container">
+//  <div class="col small_6 medium_3 item">
+//    <div class="dark-grey-1 bg-light-grey-3 circle circle--large col--centered">Light grey 3</div>
+//    <div class="gamma">
+//      <strong>CSS</strong> .light-grey-3, .bg-light-grey-3
+//    </div>
+//  </div>
+//  <div class="col small_6 medium_3 item">
+//    <div class="dark-grey-1 bg-light-grey-2 circle circle--large col--centered">Light grey 2</div>
+//    <div class="gamma">
+//      <strong>CSS</strong> .light-grey-2, .bg-light-grey-2
+//    </div>
+//  </div>
+//  <div class="col small_6 medium_3 item">
+//    <div class="dark-grey-1 bg-light-grey-1 circle circle--large col--centered">Light grey 1</div>
+//    <div class="gamma">
+//      <strong>CSS</strong> .light-grey-1, .bg-light-grey-1
+//    </div>
+//  </div>
+//</div>
+//
+// Styleguide 5.2
+
+
+// Border colours
+//
+// Set a border colour
+//
+// .border--primary-color - Border primary color
+// .border--secondary-color - Border secondary color
+//
+// Markup:
+// <div class="inline-block">
+//   <div class="bg-light-grey-1 soft dark-grey-3 border--top {$modifiers}">.{$modifiers}</div>
+// </div>
+//
+// Styleguide 5.3
+
+
+// Border positions
+//
+// Set a vertical border position
+//
+// .border - Border on all sides
+// .border--top - Border top
+// .border--bottom - Border bottom
+// .border--ends - Border ends
+//
+// Markup:
+// <div class="inline-block">
+//   <div class="bg-light-grey-1 soft dark-grey-3 {$modifiers}">.{$modifiers}</div>
+// </div>
+//
+// Styleguide 5.4
+
+
+// Border size
+//
+// Set a border size
+// 
+// .border--4 - Border 4px  deep
+// .border--6 - Border 6px  deep
+// .border--8 - Border 8px  deep
+//
+// Markup:
+// <div class="inline-block">
+//   <div class="bg-light-grey-1 soft dark-grey-3 border--top {$modifiers}">.{$modifiers}</div>
+// </div>
+//
+// Styleguide 5.6
+
+// Border style
+//
+// Set a border style
+//
+// .border--dotted - Border dotted
+//
+// Markup:
+// <div class="inline-block">
+//   <div class="bg-light-grey-1 soft dark-grey-3 border--top {$modifiers}">.{$modifiers}</div>
+// </div>
+//
+// Styleguide 5.5
+
+
+
+/* Grayscale colours ---------------------- */
+
+.light-grey-1 {
+	color:$light-grey-1;
+	}
+	
+.light-grey-2 {
+	color:$light-grey-2;
+	}
+	
+.light-grey-3 {
+	color:$light-grey-3;
+	}
+	
+.bg-light-grey-1 {
+	background-color:$light-grey-1;
+	}
+	
+.bg-light-grey-2 {
+	background-color:$light-grey-2;
+	}
+	
+.bg-light-grey-3 {
+	background-color:$light-grey-3;
+	}
+	
+.mid-grey-1 {
+	color:$mid-grey-1;
+	}
+	
+.mid-grey-2 {
+	color:$mid-grey-2;
+	}
+	
+.mid-grey-3 {
+	color:$mid-grey-3;
+	}
+		
+.bg-mid-grey-1 {
+	background-color:$mid-grey-1;
+	}
+	
+.bg-mid-grey-2 {
+	background-color:$mid-grey-2;
+	}
+	
+.bg-mid-grey-3 {
+	background-color:$mid-grey-3;
+	}
+	
+.dark-grey-1 {
+	color:$dark-grey-1;
+	}
+	
+.dark-grey-2 {
+	color:$dark-grey-2;
+	}
+	
+.dark-grey-3 {
+	color:$dark-grey-3;
+	}
+	
+.bg-dark-grey-1 {
+	background-color:$dark-grey-1;
+	}
+	
+.bg-dark-grey-2 {
+	background-color:$dark-grey-2;
+	}
+	
+.bg-dark-grey-3 {
+	background-color:$dark-grey-3;
+	}
+	
+	
+/* Branding Properties ---------------------- */
+
+.primary-color {
+	color:$primary-color;
+	}
+	
+.bg-primary-color {
+	background-color:$primary-color;
+	}
+
+
+
+
+	
+.bg-primary-color--darken-10 {
+	background-color:darken($primary-color, 10%);
+	}
+	
+.bg-primary-color--darken-20 {
+	background-color:darken($primary-color, 20%);
+	}
+	
+.secondary-color {
+	color:$secondary-color;
+	}
+	
+.bg-secondary-color {
+	background-color:$secondary-color;
+	}
+
+
+/* Additional Colours ---------------------- */
+
+.black {
+	color:#000;
+	}
+
+.bg-off-black {
+	background-color:#111;
+	}
+
+.bg-off-black--80 {
+	background-color:rgba(#111,.8);
+	}
+	
+.white {
+	color:#fff;
+	}
+	
+.grey {
+	color:$light-grey-3;
+	}
+	
+.red {
+	color:$red;
+	}
+	
+.blue {
+	color:$blue;
+	}
+	
+.bg-blue {
+	background-color:$blue;
+	}
+
+.green {
+	color:$green;
+	}
+	
+.bg-green {
+	background-color:$green;
+	}
+	
+.yellow {
+	color:$yellow;
+	}
+	
+.bg-yellow {
+	background-color:$yellow;
+	}
+	
+.beige {
+	color:$beige;
+	}
+	
+.bg-beige {
+	background-color:$beige;
+	}
+
+.diesel {
+	color:$diesel;
+	}
+	
+.bg-diesel {
+	background-color:$diesel;
+	}
+
+.orange {
+	color:$orange;
+	}
+	
+.bg-orange {
+	background-color:$orange;
+	}
+
+.bg-black {
+	background-color:#000;
+	}
+	
+.bg-white {
+	background-color:#fff;
+	}
+	
+.bg-grey {
+	background-color:$light-grey-1;
+	}
+	
+.bg-grey--large {
+	@include respond-min(60em) {
+		background-color:$light-grey-1;
+		}
+	}
+	
+.bg-transparent {
+	background-color:transparent;
+	}
+	
+
+	
+/* Borders ---------------------- */
+	
+.border {
+	border:2px solid $mid-grey-2;
+	}
+
+.border--top {
+	border-top:2px solid $mid-grey-2;
+	padding-top:lh(.5);
+	}
+	
+.border--bottom {
+	border-bottom:2px solid $mid-grey-2;
+	push--bottom:lh(.5);
+	padding-bottom:lh(.5);
+	}
+
+.border--left {
+	border-left:2px solid $mid-grey-2;
+	padding-left:lh(.5);
+	}
+	
+.border--dotted {
+	border-style:dotted;
+	}
+	
+.border--top-large {	
+	border-top:6px solid #666;
+	padding-top:lh(.75);
+	}
+	
+.border--primary-color {
+	border-color:$primary-color;
+	}
+	
+.border--secondary-color {
+	border-color:$secondary-color;
+	}
+	
+.border--large-and-up {
+	@include respond-max(60em) {
+		border:none;
+		padding:0;
+		}
+	}
+
+
+/* Border size ---------------------- */	
+
+.border--4 {
+	border-width:4px;
+	}
+	
+.border--6 {
+	border-width:6px;
+	}
+
+.border--8 {
+	border-width:8px;
+	}
+
+	
+	
+.borders--vertical {	
+	border-top:2px solid $primary-color;
+	border-bottom:1px dotted $light-grey-2;
+	push--bottom:lh(.5);
+	padding:lh(.25) 0 lh(.75) 0;
+	&.bg-grey {
+		padding-left:lh(.33);
+		}
+
+	}	
+	
+.borders--vertical--large {	
+	border-bottom:2px solid $primary-color;
+	border-top:2px solid $primary-color;
+	padding:lh(.33) 0 lh(1) 0;
+	&.bg-grey {
+		padding-left:lh(.33);
+		}
+	}
+	
+.border--hover	{
+	-webkit-transition: -webkit-box-shadow 0.15s, border-color 0.15s ease-in-out;
+	-moz-transition: -moz-box-shadow 0.15s, border-color 0.15s ease-in-out;
+	transition: box-shadow 0.15s, border-color 0.15s ease-in-out; 
+	
+	&:hover {
+		-webkit-box-shadow: 0 0 5px $primary-color;
+		-moz-box-shadow: 0 0 5px $primary-color;
+		box-shadow: 0 0 5px $primary-color;
+		border-color: $primary-color;
+		}
+		
+	}
+
+
+/* Overlines ---------------------- */		
+.overline {
+	background-color:$dark-grey-3;
+	display:block;
+	float:none;
+	height:2px;
+	margin-bottom:lh(.5);
+	margin-top:lh(.5);
+	text-align:left;
+	&.bg-white {
+		background-color:#fff;
+		}
+	}
+	
+.overline--centered {
+	margin-left:auto;
+	margin-right:auto;
+	}
+	
+.overline--1 {
+	width:em(40px);
+	}
+	
+.overline--primary-color {
+	background-color:$primary-color;
+	}
+	
+.overline--secondary-color {
+	background-color:$secondary-color;
+	}
+	

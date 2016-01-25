@@ -1,0 +1,191 @@
+
+
+
+
+/*=VARIABLES - TYPEFACES
+------------------------------------------------*/
+
+$font-family: "Myriad W01 Regular", Helvetica, Arial, "Lucida Grande", sans-serif;	
+
+$primary-font: "Myriad W01 Regular", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+$primary-font-bold: "Myriad W01 Bd", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+$primary-font-condensed: "Myriad W01 SmBd Cnd", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+$secondary-font:"Egyptian Slate W01", georgia, "Times New Roman", serif;	
+
+
+
+/*=Palette
+------------------------------------------------*/
+$blue:shade(#3f9CC3,20%);
+
+$green:#97CB3F;
+
+$beige:#F0E5DC;
+
+$diesel:#4F6177;
+
+
+
+/*=Additional UI Colours - helpful when wireframing
+------------------------------------------------*/
+$red:#B44747;
+
+$orange:#D87419;
+
+$yellow:#E9921B;
+
+$dark-green:#688A00;
+
+
+
+/*= Abstracted for common UI colours hierarchy
+------------------------------------------------*/
+
+$primary-color:$blue;
+
+$secondary-color:$green;
+
+
+
+/*=Additional Grey UI Colours - helpful when wireframing
+------------------------------------------------*/
+
+$light-grey-1: #f2f2f2;
+
+$light-grey-2: #e6e6e6;
+
+$light-grey-3: #cccccc;
+
+$mid-grey-1: #b3b3b3;
+
+$mid-grey-2: #999999;
+
+$mid-grey-3: #848E92;
+
+$dark-grey-1: #666666;
+
+$dark-grey-2: #4d4d4d;
+
+$dark-grey-3: #3D4950;
+
+
+
+$off-black:#1a1a1a;
+
+$off-white:#e7e6dd;
+
+
+
+/*=Additional UI Variable Colours
+------------------------------------------------*/
+
+$info-color: $primary-color;
+
+$success-color: $dark-green;
+
+$warning-color: $orange;
+
+$danger-color: $red;
+
+
+
+
+/*=VARIABLES - FONTS
+------------------------------------------------*/
+
+$font-base: 16px;
+
+$font-base-line-height: 24px;
+
+$font-base-line-height-half: $font-base-line-height / 2;
+
+$font-base-percentage: (($font-base / 16px) * 100) + 0%;
+
+$max-width: 1200px;
+
+
+/*FUNCTIONS
+------------------------------------------------*/
+@function em($target, $context: $font-base) {
+	@if $target == 0 { @return 0 }
+	@return $target / $context + 0em;
+	}
+
+
+@function lh($amount: 1, $context: $font-base) {
+	@return em($font-base-line-height * $amount, $context);
+	}
+	
+
+
+
+/*=MIXINS 
+------------------------------------------------*/
+$radius:4px !default;
+
+$shadow: 1px 1px 1px 0px !default;
+
+@mixin border-radius($radius: $radius) {
+	-moz-border-radius: ($radius);
+  	-webkit-border-radius: ($radius);
+  	-ms-border-radius: ($radius);
+  	border-radius: ($radius);
+	}
+	
+@mixin box-shadow($shadow: $shadow) {
+	-moz-box-shadow: ($shadow);
+  	-webkit-box-shadow: ($shadow);
+  	box-shadow: ($shadow);
+	}
+
+@mixin border-box {
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	}
+	
+@mixin transitions {	
+	-webkit-transition: all 0.15s ease-in-out;
+	-moz-transition: all 0.15s ease-in-out;
+	-o-transition: all 0.215s ease-in-out;
+	-ms-transition: all 0.15s ease-in-out;
+	transition: all 0.15s ease-in-out;
+	}
+	
+@mixin linear-gradient($fromColor, $toColor) {
+	background-color: $toColor; /* Fallback Color */
+	background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+	background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, $fromColor, $toColor);
+	}
+	
+// Hide from both screenreaders and browsers: h5bp.com/u
+@mixin hidden {
+	display: none !important;
+	visibility: hidden;
+	}
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+@mixin visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	}
+
+@mixin opacity ( $value: 0.5 ) {
+	opacity: $value;
+	zoom: 1;
+	}
+
+	

@@ -1,0 +1,147 @@
+// Tabs
+//
+// Tabs are elements that help you organize and navigate multiple documents in a single container. They can be used for switching between items in the container.
+//
+// Styleguide 14.0
+
+// Simple ARIA tab interface
+//
+// A tab interface built on <abbr title="Plain Old Semantic HTML">POSH</abbr> and enhanced with ARIA via javascript. Just requires you to place the structure within a wrapping div. In our case this is identified by the class .tab-interface. No other classes are required.
+//
+// Markup:
+//<div class="tab-interface">
+//  <ul class="tab__list">
+//    <li class="tab__item"><a href="#section1" class="tab__link">Section 1</a></li>
+//    <li class="tab__item"><a href="#section2" class="tab__link">Section 2</a></li>
+//    <li class="tab__item"><a href="#section3" class="tab__link">Section 3</a></li>
+//  </ul>
+//  <section id="section1" class="soft">
+//    <h3 class="mega push--bottom">Section 1</h3>
+//    <p class="beta">Duis sagittis, est sit amet gravida tristique, purus lectus venenatis urna, id molestie magna risus ut nunc. Aliquam nisl enim, tristique tempus placerat at, posuere in lectus. Vestibulum sit amet ipsum lacus. Suspendisse <em>potenti</em>. </p><p class="beta">Nulla lobortis tempus commodo. Fusce ac sodales magna. Cras molestie risus a <q cite="http://www.heydonworks.com">enim convallis vitae</q> luctus libero lacinia. Donec tempus tempus tellus, ac lacinia turpis mattis ac. Maecenas sit <q cite="http://www.heydonworks.com">amet tellus nec mi gravida posuere</q> non pretium magna. Aliquam nisl enim, tristique tempus placerat at, posuere in lectus. Aliquam tincidunt velit sit amet ante hendrerit tempus. Sed mauris arcu, aliquet ultrices malesuada sed, pretium id <kbd>CTRL</kbd> + <kbd>V</kbd> massa. </p>
+//  <ul>
+//    <li><a href="http://www.bbc.co.uk">Section 1</a></li>
+//    <li><a href="#">Section 2</a></li>
+//    <li><a href="#">Section 3</a></li>
+//  </ul>
+//  </section>
+//  <section id="section2" class="soft">
+//    <h3 class="mega push--bottom">Section 2</h3>
+//    <p class="beta">Fusce ac sodales <abbr title="Cascading Style Sheets">CSS</abbr> magna. Donec et nisi dictum felis sollicitudin congue. Aliquam nisl enim, tristique tempus placerat at, posuere in lectus. Sed dapibus, lectus sit amet adipiscing egestas, mauris est viverra nibh, iaculis pretium sem orci aliquet mauris. Suspendisse <del>potenti</del>. Duis sagittis, est sit amet gravida tristique, purus lectus venenatis urna, id molestie magna risus ut nunc. Fusce ac sodales magna. Potenti et eros sed justo commodo bibendum non at nunc. </p><p class="beta">Suspendisse potenti cras molestie, risus a enim convallis vitae luctus libero lacinia. Nulla vel magna sit amet dui <a href="#">lobortis</a> commodo vitae vel nulla. Suspendisse potenti. Sed dapibus, lectus sit amet adipiscing egestas, mauris est viverra nibh, <a href="#">iaculis pretium</a> sem orci aliquet mauris. Donec a congue leo. Vestibulum sit amet ipsum lacus. </p>
+//  </section>
+//  <section id="section3" class="soft">
+//    <h3 class="mega push--bottom">Section 3</h3>
+//    <p class="beta">Potenti et eros sed justo commodo bibendum non at nunc. Maecenas sit amet tellus nec mi gravida posuere non pretium magna. Nulla auctor eleifend turpis consequat pharetra. </p><p class="beta">Vestibulum sit amet ipsum lacus. Lorem ipsum dolor sit amet, consectetur <em>adipiscing elit</em>. Sed dapibus, lectus sit amet adipiscing egestas, mauris est viverra nibh, iaculis pretium sem orci aliquet mauris. Duis sagittis, est sit amet gravida tristique, purus lectus venenatis urna, id molestie magna risus ut nunc. Nulla vel magna sit amet dui <a href="#">lobortis</a> commodo vitae vel nulla. </p><p class="beta">Suspendisse potenti. Aliquam nisl enim, tristique tempus placerat at, posuere in lectus. Lorem ipsum dolor sit amet, consectetur <em>adipiscing elit</em>. Suspendisse potenti H<sub>2</sub>0. </p>
+//  </section>
+//</div>
+//
+// Styleguide 14.1
+
+	
+// Responsive tabs to accordion
+//
+//  jQuery script for creating responsive tabs. The controls behave like regular tabs above a specified screen width (defined by an editable media query in the associated css file), and behave like an accordion on screens below that width. <a href="https://github.com/petelove666/Responsive-Tabs">Responsive Tabs on Github</a>
+// 
+// Markup:
+//<div class="responsive-tabs">
+//   <h2>
+//     Tab 1
+//   </h2>
+//    <div class="soft--ends">
+//       First panel content goes here. Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+//    </div>
+//   <h2>
+//      Tab 2
+//   </h2>
+//    <div class="soft--ends">
+//      Second panel content goes here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+//    </div>
+//   <h2>
+//      Tab 3
+//   </h2>
+//    <div class="soft--ends">
+//      Third panel content goes here. Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+//    </div>
+//   <h2>
+//      Tab 4
+//   </h2>
+//    <div class="soft--ends">
+//      Fourth panel content goes here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <a href="#">quis nostrud</a> exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+//    </div>
+//  </div>	
+//
+// Styleguide 14.2	
+
+
+
+
+
+.tab__link {
+	background-color:#fff;
+	border-bottom: 1px solid $light-grey-3;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+	border-spacing:0;
+	border-top: 2px solid transparent;
+	color:$dark-grey-1;
+	display: block;
+	font-family:$primary-font;
+	height:em(48px);
+	line-height:em(32px);
+	margin:0;
+	padding: 0 lh(.33);
+	text-decoration:none;
+
+	&:hover {
+		color:$primary-color;
+		cursor: pointer; 
+		text-decoration:none;
+		}
+		
+	&:visited {
+		color:$dark-grey-1;
+		}	
+		
+	@include respond-min($medium) {
+		padding: lh(.33) lh(1);
+		}
+
+	}
+
+.tab__link[aria-selected] {	
+	background-color:#fff;
+	border-bottom: 1px solid #fff;
+	border-left: 1px solid $light-grey-3;
+	border-right: 1px solid $light-grey-3;
+	border-spacing:0;
+	border-top: 2px solid $primary-color;
+	color:$primary-color;
+	cursor: default; 
+	margin-left:0;
+	}
+
+.tab__list {
+	@include clearfix();
+	border-bottom: solid 1px $light-grey-3;
+	display: block; 
+	font-size:em(18px);
+	height:em(48px);
+	list-style: none;
+	margin-bottom:lh(1); 
+	padding:0; 
+
+	@include respond-min($medium) {
+		padding: 0 lh(1); 
+		}
+
+	}
+
+.tab__item {
+	display: inline-block;
+	list-style: none;
+	}
+
+
+[role="tabpanel"][aria-hidden="true"] {
+	display: none;
+	}
+

@@ -1,0 +1,156 @@
+
+
+/* REQUIRED for core functionality */
+
+.responsive-tabs__heading { 
+	display: none;
+	}
+
+.responsive-tabs__list__item { 
+	cursor:pointer;
+	display: inline;
+	}
+
+
+@include respond-max(47.95em) {
+
+	.responsive-tabs__list { 
+		display: none;
+		}
+
+	.responsive-tabs__heading { 
+		cursor: pointer; 
+		display: block; 
+		}
+
+	.responsive-tabs__panel--closed-accordion-only { 
+		display: none;
+		}
+
+	}
+
+@include respond-min($medium) {
+
+	.responsive-tabs__panel--closed-accordion-only { 
+		display: block !important;
+		}
+	}
+
+/* END - Required for core functionality */
+
+
+/* OPTIONAL - Basic Skin */
+
+.responsive-tabs-wrapper { 
+	clear: both;
+	zoom: 1; 
+	}
+
+.responsive-tabs-wrapper:before,
+.responsive-tabs-wrapper:after {
+	content: "";
+	display: table;
+	} 
+
+.responsive-tabs-wrapper:after {
+	clear: both;
+	}
+
+.responsive-tabs__heading:focus,
+.responsive-tabs__list__item:focus { 
+	outline: 1px solid #ccc; 
+	}
+
+.responsive-tabs__heading--active:focus,
+.responsive-tabs__list__item--active:focus { 
+	outline: none !important;
+	}
+
+.responsive-tabs__list { 
+	@include clearfix();
+	border-bottom: solid 1px $light-grey-3;
+	height:em(48px);
+	margin: 0;
+	padding: 0 lh(1);
+	}
+
+
+
+.responsive-tabs__list__item  {
+	background-color:#fff;
+	border-bottom: solid 1px $light-grey-3;
+	border-right: #fff;
+	border-top: 2px solid #fff;
+	color:$dark-grey-1;
+	cursor: pointer;
+	display: block;
+	float: left;
+	font-family:$primary-font;
+	height:em(48px);
+	line-height:em(48px);
+	list-style: none;
+	margin:0;
+	padding: 0 lh(1);
+
+	&:hover {
+		background-color:$light-grey-1;
+		cursor: pointer; 
+		}
+		
+	}
+
+
+.responsive-tabs__list__item--active, 
+.responsive-tabs__list__item--active:hover  {
+	background-color:#fff;
+	border-bottom: 1px solid #fff;
+	border-left: 1px solid $light-grey-3;
+	border-right: 1px solid $light-grey-3;
+	border-top: 2px solid $primary-color; 
+	color:$dark-grey-3;
+	cursor: pointer; 
+	text-shadow:none;
+	}
+
+.responsive-tabs__panel { margin-bottom: 50px;}
+
+@include respond-max(47.95em) {
+	
+	.responsive-tabs__heading { 
+		background-color: #fff;
+		border-top:2px solid $primary-color;
+		color:$dark-grey-3;
+		cursor: pointer;
+		font-family:$primary-font;
+		margin: 0;
+		padding:lh(.66) 0 lh(.66) lh(1);
+		position:relative;
+		}
+
+	.responsive-tabs__heading:after {
+		color:$primary-color;
+		content: '\E80A'; 
+		display: block; 
+		font-family:"fontello";
+		font-size:em(21px);
+		position:absolute;
+		left:0;
+		top:lh(.33);
+		}
+
+	.responsive-tabs__heading:hover,
+	.responsive-tabs__heading--active:hover { 
+		color:$primary-color
+		}	
+
+	.responsive-tabs__heading--active { 
+		background: #fff;
+		}
+
+	.responsive-tabs__heading--active:after {
+		content: '\E808'; 
+		}
+	}
+
+/* END - Optional - Basic Skin */
+

@@ -1,0 +1,90 @@
+/*
+
+slight remix of
+http://lea.verou.me/2011/08/accessible-star-rating-widget-with-pure-css/
+
+*/
+
+.rating:not(:checked) > label:before {
+	content: '\2605'; 
+	}
+
+ .rating >  input:checked ~  label:before {
+	content: '\2605';
+	} 
+
+ .rating >  input ~  label:hover:before {
+	content: '\2605';
+	} 
+
+.rating > input:checked ~ label {
+	color:#aaa;
+	}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+	color: gold;
+	}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+	color: gold;
+	}
+
+
+
+.rating {
+	float:left;
+	}
+
+.rating:not(:checked) > input {
+	border:none;
+	clip: rect(0,0,0,0);
+	height:1px;
+	margin:-1px;
+	overflow:hidden;
+	padding:0;
+	position: absolute;
+	top: 100%;
+	visibility:hidden;
+	width:1px;
+	}
+
+.rating:not(:checked) > label {	
+	color:#ddd;
+	cursor:pointer;
+	float:right;
+	font-size:200%;
+	line-height:1.2;
+	overflow:hidden;
+	padding:0 .1em;
+	white-space:nowrap;
+	width:1em;
+	}
+
+
+.rating > input:checked ~ label {
+	color: #f70;
+	}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+	color: gold;
+	}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+	color: #ea0;
+	}
+
+.rating > label:active {
+	position:relative;
+	top:0;
+	left:0;
+	}
